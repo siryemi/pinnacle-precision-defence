@@ -1,149 +1,164 @@
 # Pre-launch checklist
 
 Every item marked in gold on the site (`<span class="todo">`) is a placeholder that must be
-replaced with a **verified** fact before this site is published. They are deliberately styled to
-be impossible to miss in a browser, so nothing ships by accident.
-
-To find them all:
+replaced with a **verified** fact before publication. They are styled to be impossible to miss
+in a browser, so nothing ships by accident.
 
 ```bash
 grep -rn 'class="todo"' --include='*.html' .
 ```
 
-Placeholders live in the generator, not the generated HTML. Edit `tools/layout.py` (footer,
-navigation) or the relevant `tools/content_*.py` module, then re-run `python3 tools/generate.py`.
+Placeholders live in the generator, not the generated HTML. Edit `tools/layout.py` (company
+facts, nav, footer) or the relevant `tools/content_*.py` module, then re-run
+`python3 tools/generate.py`.
+
+**Content source of truth:** everything on this site derives from two documents in
+`Context from Lekan/` — the profile deck (`pinnacle_precision_defense_profile.pptx`) and the
+phased pitch (`Pitch on 3 phases.pdf`). Do not add capabilities that are not in those documents.
 
 ---
 
-## 1. Corporate identity — blocking
+## 1. Already resolved from the profile deck
+
+These no longer need chasing — they came from slide 10 and are live on the site:
+
+- Legal name: Pinnacle Precision Engineering & Consulting Limited
+- Headquarters: Abuja, Nigeria
+- `info@pinnaclepec.com`, `enquiries@pinnaclepec.com`
+- `+1 (662) 497-9481`
+- Site domain set to `pinnaclepec.com` (`SITE_URL` in `tools/layout.py`)
+
+## 2. Corporate identity — still blocking
 
 | Item | Where | Notes |
 |---|---|---|
-| CAC registration (RC) number | footer (every page), `about/index.html` | From the CAC certificate of incorporation. |
+| CAC registration (RC) number | footer (every page), `about/index.html`, legal pages | From the certificate of incorporation. |
 | Date of incorporation | `about/index.html` | |
-| Registered office address | footer, `about/index.html`, `contact/index.html`, legal pages | Must match the CAC record. |
-| Switchboard number | footer, `contact/index.html` | |
-| Enquiries email | footer, `contact/index.html` | |
-| Business development email | `contact/index.html` | |
-| Recruitment email | `careers/index.html` | |
-| Press email | `contact/index.html` | |
-| Confidential reporting email + phone | `about/integrity-and-compliance.html`, `contact/index.html`, `legal/anti-corruption-policy.html` | Must route to the compliance function, **not** to a fee-earning line. |
-| Domain name | `tools/layout.py` → `SITE_URL`, and the `canonical` tag in `index.html` | Currently `pinnacleprecisiondefence.ng` — confirm or change before launch, then re-run the generator. |
+| Registered office street address | footer, `about/index.html`, `contact/index.html`, legal pages | Must match the CAC record. |
+| Nigerian phone line | `contact/index.html`, footer | The deck's number is a **US** number against an Abuja HQ. It works, but a Nigerian line reads far better to a Nigerian military buyer and removes an obvious question. |
+| Confidential reporting channel | `about/integrity-and-compliance.html`, `legal/anti-corruption-policy.html` | Currently routed to general enquiries. A separate address that does **not** reach delivery staff is the point of the control. |
 
-## 2. Leadership — blocking, and the highest-risk section
+## 3. Credentials — the highest-value items on this list
 
-`about/leadership.html` is a **structural placeholder only**. Do not publish named biographies until:
+For an engineering and construction firm bidding defence work, these get requested first.
+Publishing them is a competitive advantage; claiming them without holding them is fatal.
+Listed with placeholders on `about/leadership.html`:
 
-- [ ] The individual has confirmed their appointment **in writing**.
-- [ ] The individual has read and approved their own biography text.
-- [ ] Every claimed rank, appointment, posting, decoration, degree and professional membership
-      has been independently verified against documentation.
-- [ ] Any reference to prior service is cleared against the individual's terms of retirement —
-      some carry restrictions on the commercial use of a former appointment.
+- [ ] **COREN registration** — for the firm and each named engineer. Directly checkable.
+- [ ] **BPP contractor registration** — Bureau of Public Procurement registration and category.
+      Effectively a prerequisite for federal work.
+- [ ] **Professional indemnity insurance** — cover level and insurer.
+- [ ] **ISO 9001** quality management, or a stated timeline to certification.
+- [ ] **Health and safety record** — safety management system and incident history.
+- [ ] **Project references** — completed civil/engineering projects, with client permission to cite.
 
-Overstating a leadership team's credentials is the fastest way to destroy a new defence
-advisory firm's credibility, and it is trivially checkable by exactly the people you are
-selling to.
+The deck claims "15+ years of combined founding-team experience." That is on the site as written.
+Be ready to substantiate it by naming the projects if asked.
 
-Also required: advisory board composition, and publication of its terms of reference.
+## 4. Leadership — blocking
 
-## 3. Numbers — remove or substantiate
+`about/leadership.html` is a **structural placeholder**. Do not publish named biographies until:
 
-The homepage stat band (`index.html`) has three placeholder figures: consultant headcount,
-combined years of service experience, and engagements delivered.
+- [ ] The individual has confirmed their appointment in writing.
+- [ ] They have read and approved their own biography text.
+- [ ] Every qualification, professional registration and project claim is verified against
+      documentation.
 
-For a newly incorporated firm, the honest options are:
+## 5. Claims discipline — keep these
 
-1. Publish real figures once they exist, however modest.
-2. **Delete the stat band entirely** until they do.
+The deck's own disclaimers are good practice and are carried through the site. **Do not remove
+them** until the underlying facts change:
 
-Do not publish an aspirational number. Combined-experience figures in particular are easy to
-inflate and are treated as a warning sign by informed buyers.
+- "These are proposed defence applications for discussion purposes and do not represent claims
+  of completed Nigerian Army contracts." — homepage, every sector page, every capability page.
+- "Illustrative target: disciplined vendor qualification and inventory practices are designed to
+  shorten lead times and reduce stock-outs. Actual results depend on scope and baseline
+  conditions." — `capabilities/defence-supply-chain.html`.
+- "Illustrative example" framing on the predictive-maintenance bearing-degradation example.
+- "All work proceeds within the formal procurement, governance, security and confidentiality
+  requirements set by the client."
 
-## 4. Clients and case studies
+No client is named anywhere, by design. Before any client reference appears: written permission,
+confidentiality review, internal sign-off.
 
-No client is named anywhere on the site, by design. Before any client reference appears:
+## 6. Scope statement — verify it still matches the business
 
-- [ ] Written permission from the client to be named.
-- [ ] Classification review of the engagement description.
-- [ ] Sign-off from the compliance function.
+The site states plainly that the firm supplies **non-weaponized** categories only, and does not
+supply, broker or finance weapons, ammunition or ordnance. This is taken directly from both
+source documents, which describe non-weaponized scope as a deliberate value proposition
+("reduces procurement complexity").
 
-The sector pages each carry a visible notice stating that describing a sector does not assert
-an existing contractual relationship. **Keep that notice** until real, permissioned references
-exist.
+It appears on the homepage scope section, `about/index.html`, and commitments 01 and 06 of
+`about/integrity-and-compliance.html`.
 
-## 5. Legal documents — require Nigerian counsel
+- [ ] Confirm this is still accurate. **If the business intends to supply weapons or ordnance,
+      these sections must be rewritten before launch and the licensing position stated** —
+      end-user certification and the relevant Nigerian approvals become the centre of the site's
+      credibility at that point.
 
-All three carry a "draft requiring legal review" banner. Do not remove the banner until counsel
-has signed off.
+## 7. Legal documents — require Nigerian counsel
 
-- [ ] `legal/privacy-policy.html` — must be checked against the **Nigeria Data Protection Act**.
-      Sections needing real answers: what the live site actually collects, lawful basis per
-      purpose, cookie/analytics inventory, processor list, retention periods per data category,
-      international transfer safeguards (relevant as soon as you use foreign cloud hosting or
-      email).
-- [ ] `legal/terms-of-use.html` — limitation of liability and jurisdiction clauses are
-      deliberately left blank rather than filled with generic wording.
-- [ ] `legal/anti-corruption-policy.html` — confirm the applicable Nigerian statutes, set the
-      gift/hospitality threshold, name the financial approval thresholds and controls, set the
-      training frequency and the board review cycle.
+All three carry a "draft requiring legal review" banner. Do not remove it until counsel signs off.
 
-Still to be drafted and published (referenced from `about/integrity-and-compliance.html`):
+- [ ] `legal/privacy-policy.html` — check against the **Nigeria Data Protection Act**. Needs real
+      answers on: what the live site collects, lawful basis per purpose, cookie/analytics
+      inventory, processor list, retention periods, international transfer safeguards.
+- [ ] `legal/terms-of-use.html` — limitation of liability and jurisdiction clauses deliberately
+      left blank rather than filled with generic wording.
+- [ ] `legal/anti-corruption-policy.html` — confirm applicable statutes, set the gift/hospitality
+      threshold, name the financial approval thresholds, set training frequency and board review
+      cycle.
 
+Still to be drafted (referenced from the integrity page):
+
+- [ ] Quality management policy
+- [ ] Health and safety policy
 - [ ] Conflict of interest policy
-- [ ] Human rights and engagement acceptance policy
 - [ ] Whistleblowing policy
 
-## 6. Insights — do not fake it
+## 8. Insights — do not fake it
 
 `insights/index.html` lists five briefings as an **editorial pipeline**, with a visible notice
-saying so. Nothing there is written yet.
+saying so. Nothing is written yet.
 
-- [ ] Write at least two briefings properly before launch — the Insights section is the single
-      strongest credibility signal available to a firm with no public client list.
-- [ ] Classification and factual review before each publication.
+- [ ] Write at least two properly before launch — with no public client list, this is the
+      strongest credibility signal available.
+- [ ] Confidentiality and factual review before each publication.
 - [ ] Remove the pipeline notice only once real, dated pieces exist.
-- [ ] Decide on the mailing list mechanism; a privacy notice is required before collecting a
-      single address.
 
-## 7. Careers
+## 9. Careers
 
-- [ ] Confirm each of the five advertised roles is genuinely open and funded. Delete the rest.
-- [ ] Real closing dates and a real application address.
-- [ ] Confirm the security vetting standard the firm will apply and can actually arrange.
-- [ ] Confirm the training budget and development framework, or remove the claim.
+- [ ] Confirm each of the five roles is genuinely open and funded. Delete the rest.
+- [ ] Real closing dates, and decide whether a dedicated recruitment address is needed.
+- [ ] Confirm the vetting standard the firm can actually arrange.
+- [ ] Confirm COREN registration support before claiming it.
 
-The recruitment-fraud warning ("we charge nothing to apply") should stay — it is accurate and
-it protects candidates.
+Keep the recruitment-fraud warning — it is accurate and protects candidates.
 
-## 8. Contact form — currently non-functional
+## 10. Contact form — currently non-functional
 
-`contact/index.html` has no submission endpoint. `assets/js/site.js` deliberately blocks
-submission and tells the user to email instead, rather than silently discarding an enquiry.
+No submission endpoint. `assets/js/site.js` deliberately blocks submission and directs the user
+to email rather than silently discarding an enquiry.
 
-To activate, set a real `action` on the `<form data-enquiry-form>` element (in
-`tools/content_company.py` → `contact()`), then re-run the generator. The JS hands control back
-to the browser as soon as an `action` is present.
-
-Requirements before enabling:
+To activate, set a real `action` on the `<form data-enquiry-form>` element in
+`tools/content_company.py` → `contact()`, then re-run the generator.
 
 - [ ] An endpoint that stores or forwards submissions somewhere monitored.
 - [ ] Spam protection.
-- [ ] Confirm the privacy policy covers the data the form collects.
-- [ ] **Keep** the on-form warning against submitting classified or operationally sensitive
-      information.
+- [ ] Privacy policy updated to cover what the form collects.
+- [ ] **Keep** the warning against submitting classified or security-sensitive information.
 
-## 9. Imagery
+## 11. Imagery
 
-The site currently uses generated SVG diagrams and CSS gradients — no photography. See
-`assets/img/README.md` for what to add and the licensing/OPSEC constraints that apply to
-defence photography specifically.
+No photography — illustrations are inline SVG. See `assets/img/README.md`. For this firm the
+highest-value additions are **photographs of completed projects**, which do more for credibility
+than any amount of copy. Subject to client permission and site security review.
 
-## 10. Third-party verification
+## 12. Repository name
 
-`about/integrity-and-compliance.html` states an intent to seek external assessment of the
-compliance programme (e.g. ISO 37001). Either confirm that intent with a real target and
-timeline, or remove the paragraph. Do not leave an unspecific promise on the page.
+The repo is still `pinnacle-precision-defence` from the earlier draft, while the site is now
+Pinnacle Precision Engineering & Consulting. Renaming it on GitHub also changes the Pages URL.
+Cosmetic, but worth doing before the link is circulated widely.
 
 ---
 
@@ -154,4 +169,5 @@ Do not publish while any of the following is true:
 - [ ] Any `class="todo"` marker remains in the built HTML.
 - [ ] Any named individual has not approved their own biography.
 - [ ] The legal pages still carry the "draft requiring legal review" banner.
-- [ ] The stat band contains a figure that cannot be substantiated on request.
+- [ ] Any credential is claimed that the firm does not currently hold.
+- [ ] The non-weaponized scope statement does not match what the business actually does.

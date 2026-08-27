@@ -21,6 +21,7 @@ import layout                      # noqa: E402
 from layout import HEADER, FOOTER, SITE_URL, render   # noqa: E402
 from content_capabilities import all_capability_pages  # noqa: E402
 from content_sectors import all_sector_pages           # noqa: E402
+from content_roadmap import all_roadmap_pages         # noqa: E402
 from content_company import all_company_pages          # noqa: E402
 
 # Homepage is hand-authored; everything below is generated.
@@ -33,6 +34,7 @@ SITEMAP_PRIORITY = {
     "sectors/index.html": "0.9",
     "contact/index.html": "0.8",
     "about/index.html": "0.8",
+    "roadmap/index.html": "0.9",
 }
 
 
@@ -63,12 +65,14 @@ def patch_homepage():
     )
 
     # First run replaces the original hand-written blocks; later runs replace the
-    # generated ones. Both patterns are anchored on structural landmarks.
+    # generated ones. The closing-marker branch MUST come first: the </header>
+    # branch would otherwise match on a generated file and stop short of the
+    # trailing marker, leaving a duplicate behind on every run.
     html, n1 = re.subn(
-        r"<!-- =+ HEADER.*?</header>|<!-- =+ HEADER.*?/HEADER =+ -->",
+        r"<!-- =+ HEADER.*?/HEADER =+ -->|<!-- =+ HEADER.*?</header>",
         lambda _: header_block, html, count=1, flags=re.S)
     html, n2 = re.subn(
-        r"<!-- =+ FOOTER.*?</footer>|<!-- =+ FOOTER.*?/FOOTER =+ -->",
+        r"<!-- =+ FOOTER.*?/FOOTER =+ -->|<!-- =+ FOOTER.*?</footer>",
         lambda _: footer_block, html, count=1, flags=re.S)
 
     if not (n1 and n2):
@@ -95,7 +99,8 @@ def write_sitemap(paths):
 
 
 def main():
-    pages = all_capability_pages() + all_sector_pages() + all_company_pages()
+    pages = (all_capability_pages() + all_sector_pages()
+             + all_roadmap_pages() + all_company_pages())
 
     written = [patch_homepage()]
     for path, title, desc, body in pages:

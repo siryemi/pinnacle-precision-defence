@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /tools/
 
-Sitemap: https://www.pinnacleprecisiondefence.ng/sitemap.xml
+Sitemap: https://www.pinnaclepec.com/sitemap.xml

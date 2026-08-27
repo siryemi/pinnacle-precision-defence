@@ -1,36 +1,44 @@
-"""Shared page chrome for the Pinnacle Precision Defence site.
+"""Shared page chrome for the Pinnacle Precision Engineering & Consulting site.
 
-The site ships as plain static HTML with no runtime dependencies. This module is
-the single source of truth for the <head>, masthead/navigation and footer; run
-``python3 tools/generate.py`` to write those into every page (including
-index.html, which is patched in place between its HEADER/FOOTER markers).
+Source of truth for the <head>, masthead/navigation and footer. Run
+``python3 tools/generate.py`` to write these into every page (including
+index.html, patched in place between its HEADER/FOOTER markers).
+
+All content derives from two client documents held in "Context from Lekan/":
+  - pinnacle_precision_defense_profile.pptx  (the four capability pillars,
+    mission, engagement model, use cases, contact details)
+  - Pitch on 3 phases.pdf                    (the short/mid/long-term roadmap)
+Do not invent capabilities that are not in those documents.
 
 Paths are emitted relative to each page's depth via {P}, so the site works when
 served from a subdirectory (GitHub Pages project sites) and from file://.
 """
 
+# --- Company facts (from the profile deck) --------------------------------- #
+LEGAL_NAME = "Pinnacle Precision Engineering &amp; Consulting Limited"
+SHORT_NAME = "Pinnacle Precision"
+BRAND_SUB = "Engineering &amp; Consulting"
+TAGLINE = "Engineering Readiness for Secure Operations"
+SITE_URL = "https://www.pinnaclepec.com"
+HQ = "Abuja, Nigeria"
+EMAIL_INFO = "info@pinnaclepec.com"
+EMAIL_ENQUIRIES = "enquiries@pinnaclepec.com"
+PHONE = "+1 (662) 497-9481"
+
 NAV_CAPABILITIES = [
-    ("strategy-and-policy",      "Defence Strategy &amp; Policy",        "Doctrine, white papers, force posture"),
-    ("capability-development",   "Capability Development",               "Requirements, force design, DLOD analysis"),
-    ("procurement-advisory",     "Procurement &amp; Acquisition",        "BPP-compliant sourcing and lifecycle costing"),
-    ("training-and-doctrine",    "Training, Doctrine &amp; Simulation",  "Curriculum design, exercise design, OPFOR"),
-    ("isr-and-c4i",              "ISR &amp; C4I Advisory",               "Sensor-to-shooter architecture, interoperability"),
-    ("sustainment-and-mro",      "Sustainment &amp; MRO",                "Availability engineering, spares, obsolescence"),
-    ("cyber-and-information",    "Cyber &amp; Information Defence",      "Assurance, SOC design, information operations"),
-    ("border-and-maritime",      "Border &amp; Maritime Security",       "Domain awareness, Gulf of Guinea operations"),
+    ("engineering-design",       "Defence Engineering Design",  "Secure facilities, C2 spaces, MEP, CAD/BIM"),
+    ("military-construction",    "Military Construction",       "Bases, barracks, logistics hubs, perimeters"),
+    ("defence-supply-chain",     "Defence Supply Chain",        "Vendor qualification, sourcing, inventory control"),
+    ("modernization-consulting", "Modernization Consulting",    "Asset management, IoT, predictive maintenance"),
 ]
 
 NAV_SECTORS = [
-    ("defence-headquarters", "Ministry of Defence &amp; DHQ",  "Policy, joint planning, programme governance"),
-    ("nigerian-army",        "Nigerian Army",                  "Land capability, counter-insurgency, training"),
-    ("nigerian-navy",        "Nigerian Navy",                  "Maritime domain awareness, fleet sustainment"),
-    ("nigerian-air-force",   "Nigerian Air Force",             "Air power, ISR, availability engineering"),
-    ("internal-security",    "Internal Security Agencies",     "Police, NSCDC, Customs, Immigration, NDLEA"),
-    ("defence-industry",     "Defence Industrial Base",        "DICON, local content, offset and OEM entry"),
+    ("nigerian-army",             "Nigerian Army",                 "Barracks, training grounds, vehicle hubs"),
+    ("defence-headquarters",      "Ministry of Defence &amp; DHQ", "Joint infrastructure programmes and governance"),
+    ("naval-and-air-installations", "Naval &amp; Air Installations", "Base infrastructure, hangars, secure storage"),
+    ("internal-security",         "Internal Security Agencies",    "Facilities for police and paramilitary services"),
+    ("defence-industrialisation", "Defence Industrialisation",     "Local assembly, maintenance hubs, transfer"),
 ]
-
-SITE_NAME = "Pinnacle Precision Defence"
-SITE_URL = "https://www.pinnacleprecisiondefence.ng"
 
 ARROW = ('<svg class="btn__arrow" viewBox="0 0 14 14" aria-hidden="true">'
          '<path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>')
@@ -42,11 +50,11 @@ MARK = ('<svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">'
         'fill="none" stroke="#00843D" stroke-width="1.6"/>'
         '<path d="M16 7.5 22.5 21h-4.1L16 15.6 13.6 21H9.5L16 7.5Z" fill="#C9A227"/></svg>')
 
-BRAND = f'''<a class="brand" href="{{P}}index.html" aria-label="{SITE_NAME} — home">
+BRAND = f'''<a class="brand" href="{{P}}index.html" aria-label="{SHORT_NAME} Engineering and Consulting — home">
       {MARK}
       <span class="brand__text">
         <span class="brand__name">Pinnacle Precision</span>
-        <span class="brand__sub">Defence</span>
+        <span class="brand__sub">{BRAND_SUB}</span>
       </span>
     </a>'''
 
@@ -81,7 +89,7 @@ HEADER = f'''<header class="masthead">
           Capabilities
           {CARET}
         </button>
-        {_panel("panel-cap", "Service lines", "capabilities", NAV_CAPABILITIES)}
+        {_panel("panel-cap", "Four capability pillars", "capabilities", NAV_CAPABILITIES)}
       </div>
 
       <div class="nav__item">
@@ -92,7 +100,7 @@ HEADER = f'''<header class="masthead">
         {_panel("panel-sec", "Who we support", "sectors", NAV_SECTORS)}
       </div>
 
-      <div class="nav__item"><a class="nav__link" href="{{P}}insights/index.html">Insights</a></div>
+      <div class="nav__item"><a class="nav__link" href="{{P}}roadmap/index.html">Roadmap</a></div>
       <div class="nav__item"><a class="nav__link" href="{{P}}about/index.html">About</a></div>
       <div class="nav__item"><a class="nav__link" href="{{P}}careers/index.html">Careers</a></div>
     </nav>
@@ -122,6 +130,7 @@ HEADER = f'''<header class="masthead">
       </div>
       <div class="drawer__group">
         <p class="drawer__title">Company</p>
+        <a href="{{P}}roadmap/index.html">Engagement roadmap</a>
         <a href="{{P}}about/index.html">About us</a>
         <a href="{{P}}about/leadership.html">Leadership</a>
         <a href="{{P}}about/integrity-and-compliance.html">Integrity &amp; compliance</a>
@@ -148,15 +157,16 @@ FOOTER = f'''<footer class="footer">
   <div class="shell">
     <div class="footer__top">
       <div class="footer__brandblock">
-        {BRAND.replace(' aria-label="' + SITE_NAME + ' — home"', '')}
+        {BRAND.replace(' aria-label="' + SHORT_NAME + ' Engineering and Consulting — home"', '')}
         <p>
-          Independent defence and security advisory to the Nigerian Armed Forces, the Ministry
-          of Defence and national security agencies.
+          A Nigerian engineering and construction firm delivering secure design, military
+          construction, defence supply chain discipline and modernization consulting.
         </p>
         <p style="margin-top:14px">
-          <span class="todo">TODO: registered address</span><br>
-          <span class="todo">TODO: phone</span><br>
-          <a href="mailto:enquiries@example.com"><span class="todo">TODO: enquiries email</span></a>
+          {HQ}<br>
+          <a href="mailto:{EMAIL_ENQUIRIES}">{EMAIL_ENQUIRIES}</a><br>
+          <a href="mailto:{EMAIL_INFO}">{EMAIL_INFO}</a><br>
+          <a href="tel:+16624979481">{PHONE}</a>
         </p>
       </div>
 
@@ -165,6 +175,7 @@ FOOTER = f'''<footer class="footer">
       {_footer_col("Sectors", [(f"sectors/{s}.html", l) for s, l, _ in NAV_SECTORS])}
 
       {_footer_col("Company", [
+          ("roadmap/index.html", "Engagement roadmap"),
           ("about/index.html", "About us"),
           ("about/leadership.html", "Leadership"),
           ("about/integrity-and-compliance.html", "Integrity &amp; compliance"),
@@ -183,7 +194,7 @@ FOOTER = f'''<footer class="footer">
 
     <div class="footer__bottom">
       <p style="margin:0">
-        © <span data-year>2026</span> Pinnacle Precision Defence Limited.
+        © <span data-year>2026</span> {LEGAL_NAME}.
         RC <span class="todo">TODO: CAC number</span>. Registered in Nigeria.
       </p>
       <div class="footer__legal">
@@ -201,14 +212,14 @@ PAGE = '''<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{title} — Pinnacle Precision Defence</title>
+<title>{title} — Pinnacle Precision Engineering &amp; Consulting</title>
 <meta name="description" content="{desc}">
 <meta name="theme-color" content="#080B0F">
 <link rel="canonical" href="{site}/{path}">
 <meta property="og:type" content="website">
-<meta property="og:title" content="{title} — Pinnacle Precision Defence">
+<meta property="og:title" content="{title} — Pinnacle Precision Engineering &amp; Consulting">
 <meta property="og:description" content="{desc}">
-<meta property="og:site_name" content="Pinnacle Precision Defence">
+<meta property="og:site_name" content="Pinnacle Precision Engineering &amp; Consulting Limited">
 <link rel="icon" href="{P}assets/img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{P}assets/css/site.css">
 </head>
@@ -258,13 +269,13 @@ def page_hero(eyebrow, title, lede, trail=(), actions=""):
 '''
 
 
-def cta_band(heading="Start with a scoping conversation",
-             body="Tell us the capability problem. We will tell you honestly whether it is one "
-                  "we are qualified to help with."):
+def cta_band(heading="Ready to support defence readiness?",
+             body="Request a capability briefing, proposal discussion, partnership meeting "
+                  "or site assessment."):
     return f'''  <section class="cta-band">
     <div class="shell cta-band__inner">
       <div>
-        <p class="eyebrow">Next step</p>
+        <p class="eyebrow">Get in touch</p>
         <h2 class="d2">{heading}</h2>
         <p>{body}</p>
       </div>
@@ -279,6 +290,51 @@ def cta_band(heading="Start with a scoping conversation",
 
 def link_arrow(label, href):
     return f'<a class="link-arrow" href="{{P}}{href}">{label} {ARROW_SM}</a>'
+
+
+def ruled(rows):
+    out = ['<div class="ruled">']
+    for h, p in rows:
+        out.append(f'      <div class="ruled__row"><h3>{h}</h3><p>{p}</p></div>')
+    out.append("    </div>")
+    return "\n".join(out)
+
+
+def accordion(acc_id, items):
+    out = [f'<div class="acc" data-acc id="{acc_id}">']
+    for i, (q, body) in enumerate(items, 1):
+        bid = f"{acc_id}-b{i}"
+        out.append(f'''      <div class="acc__item">
+        <h3><button class="acc__btn" aria-expanded="false" aria-controls="{bid}">
+          <span>{q}</span><span class="acc__sign" aria-hidden="true"></span>
+        </button></h3>
+        <div class="acc__body" id="{bid}">{body}</div>
+      </div>''')
+    out.append("    </div>")
+    return "\n".join(out)
+
+
+def cards(items, numbered=True, cols=3):
+    """items: list of (title, blurb) or (title, blurb, href)."""
+    out = [f'<div class="grid grid--{cols}">']
+    for i, item in enumerate(items, 1):
+        title, blurb = item[0], item[1]
+        href = item[2] if len(item) > 2 else None
+        num = f'<p class="card__num">{i:02d}</p>' if numbered else ""
+        foot = (f'<div class="card__foot"><span class="link-arrow">Read more {ARROW_SM}</span></div>'
+                if href else "")
+        tag = f'<a class="card" href="{{P}}{href}"' if href else '<div class="card"'
+        end = "</a>" if href else "</div>"
+        out.append(f'      {tag}>{num}<h3>{title}</h3><p>{blurb}</p>{foot}{end}')
+    out.append("    </div>")
+    return "\n".join(out)
+
+
+DISCLAIMER = (
+    '<div class="notice"><p style="margin:0"><strong>Note:</strong> the applications described '
+    'on this page are proposed defence applications for discussion purposes. They do not '
+    'represent claims of completed Nigerian Army contracts.</p></div>'
+)
 
 
 def render(path, title, desc, body):
