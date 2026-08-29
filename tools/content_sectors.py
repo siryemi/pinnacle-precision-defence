@@ -1,23 +1,25 @@
 """Sector pages: who the five capability pillars are applied for.
 
-These pages apply the same capabilities to different customers. Each carries the
-deck's own note that applications shown are proposed for discussion.
+Same capabilities, different customers. Each page carries the deck's note that
+applications shown are proposed for discussion.
+
+Copy is deliberately tight. Short sentences, one idea per line.
 """
 
 from layout import (NAV_SECTORS, ARROW, ARROW_SM, page_hero, cta_band,
                     link_arrow, ruled, accordion, cards, DISCLAIMER)
 
 _SUMMARIES = {
-    "nigerian-army": "Barracks and accommodation, training grounds, armoured vehicle "
-                     "maintenance hubs, logistics facilities and site infrastructure.",
-    "defence-headquarters": "Joint infrastructure programmes, design assurance, procurement "
-                            "governance and estate-wide asset management.",
-    "naval-and-air-installations": "Base infrastructure, hangars and workshops, secure storage, "
-                                   "and power and water resilience at naval and air stations.",
+    "nigerian-army": "Barracks, training grounds, vehicle maintenance hubs, logistics and site "
+                     "infrastructure.",
+    "defence-headquarters": "Joint programmes, design assurance, procurement governance and "
+                            "estate asset management.",
+    "naval-and-air-installations": "Base infrastructure, hangars, workshops, secure storage, "
+                                   "power and water resilience.",
     "internal-security": "Facilities, training infrastructure and logistics discipline for "
                          "police and paramilitary services.",
-    "defence-industrialisation": "Local assembly and maintenance hubs, university engineering "
-                                 "partnerships and technology transfer.",
+    "defence-industrialisation": "Local assembly and maintenance hubs, university partnerships "
+                                 "and technology transfer.",
 }
 
 
@@ -56,7 +58,7 @@ def sector_page(slug, title, eyebrow, lede, context, priorities, services, engag
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow">Capability pillars</p>
-        <h2 class="d2">What we bring to this customer</h2>
+        <h2 class="d2">What we bring here</h2>
       </div>
       <div class="grid grid--3">
         {svc}
@@ -68,7 +70,7 @@ def sector_page(slug, title, eyebrow, lede, context, priorities, services, engag
     <div class="shell">
       <div class="section-head">
         <p class="eyebrow">Applications</p>
-        <h2 class="d2">Proposed applications for discussion</h2>
+        <h2 class="d2">Proposed for discussion</h2>
       </div>
       {accordion("sec-" + slug, engagements)}
     </div>
@@ -86,9 +88,8 @@ def sectors_index():
     body = page_hero(
         "Sectors",
         "Who we support",
-        "The same five capability pillars, applied to the institutions responsible for "
-        "Nigeria's defence and internal security, and to the domestic industrial base that "
-        "will eventually equip them.",
+        "The same five pillars, applied to the institutions responsible for Nigeria's defence "
+        "and internal security, and to the industrial base that will equip them.",
         trail=[("Sectors", None)],
     )
 
@@ -103,25 +104,19 @@ def sectors_index():
     <div class="shell">
       <div class="split">
         <div>
-          <p class="eyebrow">Our primary focus</p>
+          <p class="eyebrow">Primary focus</p>
           <h2 class="d2">Positioned first for the Nigerian Army</h2>
           <p class="lede mt-16">
-            Our capability profile is written to support Nigerian Army infrastructure
-            resilience, operational readiness and long-term modernization programmes. That is
-            where our engagement is directed first.
+            Our profile is written for Army infrastructure resilience, readiness and
+            modernization. That is where engagement is directed first.
           </p>
         </div>
         <div class="prose">
           <p>
-            The other customers listed here represent the same capabilities applied to
-            different estates. Barracks construction, secure storage, power and water
-            resilience and asset management are needed at a naval base or a police training
-            college as much as at an Army formation, the engineering does not change, only
-            the customer and the governance route.
-          </p>
-          <p>
-            Where a scope needs capability beyond the five pillars, we bring in a named partner
-            rather than stretch to cover it.
+            The other customers here are the same capabilities on different estates. Barracks,
+            secure storage, utility resilience and asset management are needed at a naval base or
+            a police college as much as at an Army formation. The engineering does not change,
+            only the customer and the governance route.
           </p>
           <p>{link_arrow("See the five capability pillars", "capabilities/index.html")}</p>
         </div>
@@ -134,7 +129,7 @@ def sectors_index():
     return ("sectors/index.html", "Sectors",
             "Defence infrastructure, construction, supply chain and modernization support for "
             "the Nigerian Army, Ministry of Defence, naval and air installations, internal "
-            "security agencies and the domestic defence industrial base.",
+            "security agencies and the defence industrial base.",
             body)
 
 
@@ -146,78 +141,49 @@ def all_sector_pages():
             "nigerian-army",
             "Nigerian Army",
             "Sector · 01",
-            "Infrastructure resilience, operational readiness and long-term modernization "
-            "support for the Nigerian Army, our primary focus.",
+            "Infrastructure resilience, readiness and modernization support. Our primary focus.",
             desc="Engineering, construction, supply chain and modernization support for the "
-                 "Nigerian Army: barracks, training grounds, armoured vehicle maintenance hubs, "
-                 "logistics facilities and site infrastructure.",
+                 "Nigerian Army: barracks, training grounds, vehicle maintenance hubs and site "
+                 "infrastructure.",
             context='''          <p>
-            The Nigerian Army has been continuously committed to internal security operations
-            across several theatres for well over a decade. That tempo leaves little
-            institutional slack for the infrastructure and maintenance work that sustains
-            long-term readiness, accommodation is occupied harder than it was designed for,
-            vehicles are used beyond planned rates, and facility maintenance is deferred.
+            The Army has been committed to internal security operations across several theatres
+            for over a decade. That tempo leaves little slack for the work that sustains
+            readiness. Accommodation is occupied harder than it was designed for, vehicles run
+            beyond planned rates, facility maintenance is deferred.
           </p>
           <p>
-            Our capability profile is positioned specifically to support Army infrastructure
-            resilience and readiness. In practice that means the unglamorous work with the
-            highest return: keeping power and water on, raising vehicle availability through
-            better maintenance hubs and spares visibility, and building accommodation and
-            training facilities specified to survive intensive use on a constrained maintenance
-            budget.
-          </p>
-          <p>
-            We work to formation-level realities rather than headquarters assumptions. Phase
-            two of our roadmap is built around structured listening sessions with unit
-            commanders precisely because the binding constraint is usually not the one in the
-            formal reporting.
+            We focus on the unglamorous work with the highest return: keeping power and water on,
+            raising vehicle availability through better hubs and spares visibility, and building
+            accommodation specified to survive hard use on a tight maintenance budget.
           </p>''',
             priorities=[
                 ("Vehicle availability",
-                 "Maintenance hub design, diagnostics, workflow and spares visibility, the "
-                 "fastest route to more usable vehicles from the fleet already owned."),
-                ("Accommodation and barracks",
-                 "Durable, maintainable accommodation with efficient utilities, specified on "
-                 "whole-life rather than capital cost."),
+                 "Maintenance hub design, diagnostics, workflow and spares visibility."),
+                ("Accommodation",
+                 "Durable, maintainable barracks with efficient utilities."),
                 ("Training infrastructure",
-                 "Ranges, classrooms, workshops and simulation rooms with supporting civil works."),
+                 "Ranges, classrooms, workshops and simulation rooms."),
                 ("Power and water resilience",
-                 "Mini-grid support, borehole and water systems and backup generation, with the "
-                 "maintenance regime to sustain them."),
-                ("Logistics and stores discipline",
-                 "Warehousing layout, inventory visibility and vendor governance so stock is "
-                 "known and replenished."),
-                ("Command facilities",
-                 "Resilient command and communications spaces with protected utilities."),
+                 "Mini-grid, borehole and backup generation, with the maintenance regime."),
             ],
             services=[
                 ("Military Construction", "military-construction",
-                 "Barracks, training grounds and site infrastructure."),
+                 "Barracks, training grounds, site infrastructure."),
                 ("Modernization Consulting", "modernization-consulting",
                  "Vehicle availability and asset management."),
                 ("Defence Supply Chain", "defence-supply-chain",
-                 "Equipment selection, sourcing and inventory control."),
+                 "Equipment selection, sourcing, inventory."),
             ],
             engagements=[
                 ("Armoured vehicle maintenance hub",
-                 "<p>Diagnostics capability, workflow design, inventory visibility and predictive "
-                 "maintenance built around a vehicle fleet, aimed directly at raising the "
-                 "proportion of the fleet that is mission-capable.</p>"),
-                ("Military housing and barracks",
-                 "<p>Durable, sustainable and maintainable accommodation with efficient "
-                 "utilities, delivered so that maintenance burden after handover is designed "
-                 "down rather than discovered.</p>"),
+                 "<p>Diagnostics, workflow design, inventory visibility and predictive maintenance "
+                 "around a fleet, aimed at raising the mission-capable proportion.</p>"),
+                ("Barracks and accommodation",
+                 "<p>Durable accommodation with efficient utilities, with maintenance burden "
+                 "designed down rather than discovered.</p>"),
                 ("Training facilities",
-                 "<p>Ranges, classrooms, workshops, simulation rooms and supporting civil works, "
-                 "sequenced so existing training continues during construction.</p>"),
-                ("Water and power resilience",
-                 "<p>Mini-grid support, borehole and water systems, backup generation and "
-                 "lifecycle maintenance, frequently the highest readiness return per naira on "
-                 "an established site.</p>"),
-                ("Operational gap analysis with commanders",
-                 "<p>Structured listening sessions mapping communication gaps, mobility "
-                 "limitations, surveillance blind spots, equipment fatigue and maintenance "
-                 "challenges into an addressable, prioritised solution set.</p>"),
+                 "<p>Ranges, classrooms, workshops and civil works, sequenced so training "
+                 "continues during construction.</p>"),
             ],
         ),
 
@@ -225,48 +191,30 @@ def all_sector_pages():
             "defence-headquarters",
             "Ministry of Defence &amp; Defence Headquarters",
             "Sector · 02",
-            "Joint infrastructure programmes, design assurance and procurement governance at "
-            "the centre, where estate-wide decisions are made and audited.",
+            "Joint programmes, design assurance and procurement governance at the centre.",
             desc="Support to Nigeria's Ministry of Defence and Defence Headquarters: joint "
-                 "infrastructure programmes, design assurance, procurement governance and "
-                 "estate-wide asset management.",
+                 "infrastructure programmes, design assurance, procurement governance and estate "
+                 "asset management.",
             context='''          <p>
-            The centre carries decisions no single formation can make: which infrastructure
-            investments to fund across competing service demands, whether a submitted design and
-            cost estimate are credible, and how to demonstrate afterwards that public money
-            achieved what was approved.
+            The centre makes decisions no single formation can: which investments to fund across
+            competing service demands, whether a submitted design and cost are credible, and how
+            to show afterwards that public money achieved what was approved.
           </p>
           <p>
-            Our contribution there is analytical and assurance-focused. Independent design and
-            cost review gives the centre the ability to interrogate a submission on its merits.
-            Estate-wide asset registers and condition data turn infrastructure budgeting from an
-            annual argument into a prioritised programme. Documented procurement and handover
-            discipline produces the audit trail that protects the officers who approved the
-            spend.
-          </p>
-          <p>
-            Audit readiness is a recurring theme in our work because on public infrastructure it
-            is not administrative overhead, it is the difference between a defensible programme
-            and an exposed one.
+            Our contribution is analytical. Independent review lets the centre interrogate a
+            submission on evidence. Estate-wide asset registers turn infrastructure budgeting from
+            an annual argument into a prioritised programme. Documented delivery produces the audit
+            trail that protects the officers who approved the spend.
           </p>''',
             priorities=[
                 ("Design and cost assurance",
-                 "Independent review of submitted designs and estimates before approval, so the "
-                 "centre can challenge on evidence."),
-                ("Estate-wide asset management",
-                 "Asset registers, condition assessment and criticality ranking across multiple "
-                 "sites to support prioritised investment."),
+                 "Independent review of submitted designs and estimates before approval."),
+                ("Estate asset management",
+                 "Registers, condition assessment and criticality ranking across sites."),
                 ("Procurement governance",
-                 "Vendor qualification standards, documentation requirements and performance "
-                 "monitoring applied consistently across programmes."),
-                ("Programme documentation and audit readiness",
-                 "Evidence assembled during delivery rather than reconstructed after a query."),
-                ("Lifecycle cost analysis",
-                 "Whole-life costing so infrastructure decisions account for the maintenance "
-                 "liability they create."),
-                ("Standardisation",
-                 "Repeatable design and specification standards across an estate to reduce cost "
-                 "and simplify maintenance."),
+                 "Vendor standards, documentation and performance monitoring applied consistently."),
+                ("Audit readiness",
+                 "Evidence assembled during delivery, not reconstructed after a query."),
             ],
             services=[
                 ("Defence Engineering Design", "engineering-design",
@@ -278,21 +226,15 @@ def all_sector_pages():
             ],
             engagements=[
                 ("Independent design and cost review",
-                 "<p>A separate technical and cost opinion on a submitted infrastructure package "
-                 "before it reaches the approving authority, buildability, maintainability, "
-                 "specification appropriateness and whether the estimate is credible.</p>"),
-                ("Estate condition and asset survey",
-                 "<p>Structured condition assessment across multiple sites producing an asset "
-                 "register, criticality ranking and prioritised remediation programme with "
-                 "costs.</p>"),
+                 "<p>A separate technical and cost opinion before a package reaches the approving "
+                 "authority: buildability, maintainability, specification, and whether the estimate "
+                 "is credible.</p>"),
+                ("Estate condition survey",
+                 "<p>Condition assessment across sites producing an asset register, criticality "
+                 "ranking and a costed remediation programme.</p>"),
                 ("Procurement governance framework",
-                 "<p>Vendor prequalification criteria, documentation standards, performance "
-                 "monitoring and retention requirements, designed to be applied consistently "
-                 "and to withstand audit.</p>"),
-                ("Design standardisation programme",
-                 "<p>Development of repeatable design and specification standards for recurring "
-                 "facility types across an estate, reducing per-project design cost and "
-                 "simplifying maintenance and spares.</p>"),
+                 "<p>Prequalification criteria, documentation standards, performance monitoring and "
+                 "retention requirements, designed to withstand audit.</p>"),
             ],
         ),
 
@@ -300,72 +242,48 @@ def all_sector_pages():
             "naval-and-air-installations",
             "Naval &amp; Air Installations",
             "Sector · 03",
-            "Base infrastructure, hangars and workshops, secure storage and utility resilience "
-            "at naval and air stations.",
-            desc="Engineering and construction support for Nigerian naval and air installations: "
-                 "base infrastructure, hangars and workshops, secure storage, and power and water "
-                 "resilience.",
+            "Base infrastructure, hangars, workshops, secure storage and utility resilience.",
+            desc="Engineering and construction for Nigerian naval and air installations: base "
+                 "infrastructure, hangars, workshops, secure storage, power and water resilience.",
             context='''          <p>
-            Naval and air installations concentrate high-value equipment in a small number of
-            fixed locations, which makes their infrastructure disproportionately important. A
-            workshop without reliable power cannot complete maintenance. A hangar with a failing
-            roof damages what it was built to protect. A dockside or apron surface in poor
-            condition constrains everything that moves across it.
+            Naval and air installations concentrate high-value equipment in a few fixed locations,
+            which makes their infrastructure disproportionately important. A workshop without
+            reliable power cannot complete maintenance. A hangar with a failing roof damages what
+            it was built to protect.
           </p>
           <p>
-            The engineering here is the same as elsewhere in our profile, secure design,
-            durable construction, utility resilience, asset management, applied to buildings
-            and infrastructure with demanding technical requirements and low tolerance for
-            downtime.
-          </p>
-          <p>
-            We are an engineering and construction firm, not a naval architect or an aviation
-            authority. Our scope is the facilities and infrastructure that support platforms,
-            not the platforms themselves.
+            The engineering is the same as elsewhere in our profile, applied to buildings with
+            demanding technical requirements and low tolerance for downtime. Our scope is the
+            facilities that support platforms.
           </p>''',
             priorities=[
                 ("Workshops and maintenance facilities",
-                 "Facilities designed around the maintenance workflow, with the power, lifting "
-                 "and services the work actually requires."),
+                 "Designed around the workflow, with the power, lifting and services it needs."),
                 ("Hangars and covered storage",
-                 "Structures protecting high-value equipment, specified for the local climate "
-                 "and maintainable over decades."),
+                 "Structures protecting high-value equipment, specified for climate and decades of upkeep."),
                 ("Secure storage",
-                 "Controlled-access stores with appropriate structural protection and inventory "
-                 "visibility."),
+                 "Controlled-access stores with structural protection and inventory visibility."),
                 ("Power and water resilience",
-                 "Backup generation, distribution and water systems on sites where interruption "
-                 "stops technical work."),
-                ("Civil infrastructure",
-                 "Roads, hardstanding, drainage and site services supporting movement and "
-                 "operations."),
-                ("Facility asset management",
-                 "Condition monitoring and planned maintenance for technical buildings and "
-                 "their systems."),
+                 "Backup generation on sites where interruption stops technical work."),
             ],
             services=[
                 ("Defence Engineering Design", "engineering-design",
                  "Technical building and MEP design."),
                 ("Military Construction", "military-construction",
-                 "Construction and commissioning of facilities."),
+                 "Construction and commissioning."),
                 ("Modernization Consulting", "modernization-consulting",
-                 "Facility condition monitoring and maintenance planning."),
+                 "Condition monitoring and maintenance planning."),
             ],
             engagements=[
-                ("Workshop or maintenance facility delivery",
-                 "<p>Design and construction of a technical maintenance facility built around "
-                 "the workflow it must support, services, lifting provision, layout, lighting "
-                 "and the utility resilience to keep work moving.</p>"),
-                ("Hangar or covered storage construction",
-                 "<p>Structures protecting high-value equipment, specified for climate, "
-                 "durability and long-term maintainability rather than lowest capital cost.</p>"),
+                ("Workshop or maintenance facility",
+                 "<p>Design and construction built around the workflow: services, lifting "
+                 "provision, layout, lighting and the utility resilience to keep work moving.</p>"),
+                ("Hangar or covered storage",
+                 "<p>Structures protecting high-value equipment, specified for climate and "
+                 "long-term maintainability rather than lowest capital cost.</p>"),
                 ("Secure storage facility",
-                 "<p>Controlled-access stores with appropriate structural protection, "
-                 "environmental control where required, and layouts that keep inventory "
-                 "visible.</p>"),
-                ("Base utility resilience programme",
-                 "<p>Assessment and upgrade of power and water systems across an installation, "
-                 "prioritised by the operational consequence of each failure mode.</p>"),
+                 "<p>Controlled access, structural protection, environmental control where "
+                 "required, and layouts that keep inventory visible.</p>"),
             ],
         ),
 
@@ -379,46 +297,29 @@ def all_sector_pages():
                  "agencies: facilities, training infrastructure, accommodation and supply chain "
                  "discipline.",
             context='''          <p>
-            Police and paramilitary services operate from a far larger and more dispersed estate
-            than the military, usually with a smaller per-site maintenance budget. The result is
-            a familiar pattern: accommodation and station buildings in poor condition, training
-            facilities that constrain throughput, and stores where nobody can say with confidence
-            what is held.
+            Police and paramilitary services run a far larger and more dispersed estate than the
+            military, usually on a smaller per-site maintenance budget. The pattern is familiar:
+            station buildings in poor condition, training facilities that cap throughput, and
+            stores where nobody can say what is held.
           </p>
           <p>
-            The same pillars apply. Durable, maintainable construction; utility resilience;
-            vendor qualification and inventory visibility; and asset management that lets a
-            central authority prioritise across many sites rather than reacting to whichever one
-            escalates loudest.
-          </p>
-          <p>
-            Because this estate is large and dispersed, standardisation delivers more here than
-            anywhere else in our profile, repeatable designs and common specifications reduce
-            both construction cost and maintenance complexity.
+            Standardisation delivers more here than anywhere else in our profile. Repeatable
+            designs and common specifications cut both construction cost and maintenance
+            complexity across many sites.
           </p>''',
             priorities=[
                 ("Station and office facilities",
-                 "Durable, maintainable buildings with efficient utilities across a dispersed "
-                 "estate."),
+                 "Durable, maintainable buildings with efficient utilities across a dispersed estate."),
                 ("Training infrastructure",
-                 "Classrooms, workshops, ranges and accommodation that support required "
-                 "throughput."),
+                 "Classrooms, workshops, ranges and accommodation sized to required throughput."),
                 ("Accommodation",
-                 "Personnel accommodation specified for intensive use and low maintenance "
-                 "burden."),
+                 "Personnel accommodation specified for intensive use and low upkeep."),
                 ("Standardised design",
-                 "Repeatable designs and specifications to control cost and simplify maintenance "
-                 "across many sites."),
-                ("Stores and inventory discipline",
-                 "Vendor qualification, categorisation and inventory visibility across "
-                 "distributed holdings."),
-                ("Estate condition data",
-                 "Condition assessment and prioritisation so central budgets go to the highest "
-                 "consequence sites first."),
+                 "Repeatable designs to control cost and simplify maintenance across sites."),
             ],
             services=[
                 ("Military Construction", "military-construction",
-                 "Facilities, accommodation and training infrastructure."),
+                 "Facilities, accommodation, training infrastructure."),
                 ("Defence Supply Chain", "defence-supply-chain",
                  "Vendor governance and inventory visibility."),
                 ("Modernization Consulting", "modernization-consulting",
@@ -426,19 +327,14 @@ def all_sector_pages():
             ],
             engagements=[
                 ("Training college infrastructure",
-                 "<p>Classrooms, workshops, ranges, accommodation and supporting civil works "
-                 "sized to the training throughput the agency actually needs to achieve.</p>"),
-                ("Standardised station design programme",
-                 "<p>A repeatable design and specification set for recurring facility types "
-                 "across a dispersed estate, cutting per-project design cost and simplifying "
-                 "maintenance and spares.</p>"),
-                ("Estate condition survey and prioritisation",
-                 "<p>Condition assessment across sites producing a ranked remediation programme, "
-                 "so central budget allocation is driven by consequence rather than "
-                 "escalation.</p>"),
-                ("Stores and logistics discipline",
-                 "<p>Vendor qualification, categorisation, reorder planning and warehousing "
-                 "process design across distributed holdings.</p>"),
+                 "<p>Classrooms, workshops, ranges, accommodation and civil works, sized to the "
+                 "throughput the agency needs to achieve.</p>"),
+                ("Standardised station design",
+                 "<p>A repeatable design and specification set for recurring facility types, "
+                 "cutting per-project design cost and simplifying spares.</p>"),
+                ("Estate condition survey",
+                 "<p>Assessment across sites producing a ranked remediation programme, so budget "
+                 "allocation follows consequence rather than escalation.</p>"),
             ],
         ),
 
@@ -446,52 +342,35 @@ def all_sector_pages():
             "defence-industrialisation",
             "Defence Industrialisation",
             "Sector · 05",
-            "Local assembly and maintenance hubs, university engineering partnerships and "
-            "technology transfer, the long-term goal our earlier phases are building toward.",
+            "Local assembly and maintenance hubs, university partnerships and technology "
+            "transfer. The long-term goal.",
             desc="Supporting Nigerian defence industrialisation: local assembly and maintenance "
-                 "hubs, engineering partnerships with universities and research centres, "
-                 "technology transfer and local workforce development.",
+                 "hubs, university engineering partnerships, technology transfer and workforce "
+                 "development.",
             context='''          <p>
-            Every naira of defence equipment imported is a naira of industrial capability not
-            built at home, and a dependency on foreign spares and export licensing that
-            constrains operational freedom. The strategic case for a domestic defence industrial
-            base is straightforward. Building one is not.
+            Every naira of equipment imported is industrial capability not built at home, and a
+            dependency on foreign spares and export licensing that limits operational freedom. The
+            strategic case is straightforward. Building it is not.
           </p>
           <p>
-            Real industrial capability needs sustained order books, technology transfer that
-            conveys design authority rather than assembly rights, quality systems meeting
-            military standards, and a skills base built over years. Arrangements that deliver a
-            screwdriver plant and a press release do not advance the country.
-          </p>
-          <p>
-            This is the third phase of our roadmap, and we are explicit that it follows the
-            first two rather than replacing them. Our route into it is the most achievable one:
-            maintenance and repair localisation first, then assembly, then design, for
-            non-weaponized systems including tactical vehicles, communication systems,
-            surveillance platforms, protective equipment and field gear.
+            Real capability needs sustained order books, transfer that conveys design authority
+            rather than assembly rights, quality systems meeting military standards, and a skills
+            base built over years. Our route in is the achievable one: maintenance and repair
+            localisation first, then assembly, then design.
           </p>''',
             priorities=[
                 ("MRO localisation",
-                 "Moving maintenance, repair and overhaul work in country, the most achievable "
-                 "first industrial step and the one that most improves availability."),
-                ("Local assembly and maintenance hubs",
-                 "Facilities, tooling, quality systems and technician capability for in-country "
-                 "assembly and support."),
-                ("University and research partnerships",
-                 "Engineering partnerships with Nigerian universities and research centres to "
-                 "build the design base."),
+                 "Moving maintenance and overhaul in country. The step that most improves availability."),
+                ("Local assembly hubs",
+                 "Facilities, tooling, quality systems and technician capability."),
+                ("University partnerships",
+                 "Engineering partnerships with Nigerian universities and research centres."),
                 ("Technology transfer",
-                 "Structured transfer conveying design authority and the right to modify and "
-                 "sustain independently."),
-                ("Local workforce development",
-                 "Engineer and technician pipelines sized to the industrial capability being "
-                 "built."),
-                ("Joint R&amp;D programmes",
-                 "Co-developed research with domestic institutions on non-weaponized systems."),
+                 "Transfer conveying design authority and the right to modify and sustain."),
             ],
             services=[
                 ("Defence Engineering Design", "engineering-design",
-                 "The design capability an industrial base requires."),
+                 "The design capability an industrial base needs."),
                 ("Modernization Consulting", "modernization-consulting",
                  "Maintenance capability and asset management."),
                 ("Defence Supply Chain", "defence-supply-chain",
@@ -499,24 +378,14 @@ def all_sector_pages():
             ],
             engagements=[
                 ("Maintenance hub establishment",
-                 "<p>Design and delivery of an in-country maintenance and repair facility, "
-                 "capacity planning, workflow, tooling, test equipment and the technician "
-                 "competence framework to operate it.</p>"),
-                ("Local assembly feasibility study",
-                 "<p>Assessment of which non-weaponized systems could credibly be assembled in "
-                 "Nigeria over a stated horizon, what investment each requires, and the "
-                 "sequencing that gives the best industrial return.</p>"),
-                ("University engineering partnership design",
-                 "<p>Structuring a working partnership with Nigerian universities and research "
-                 "centres, research agenda, funding model, student pipeline and intellectual "
-                 "property arrangements.</p>"),
-                ("Technology transfer assessment",
-                 "<p>Assessing what a proposed transfer actually conveys: design authority, "
-                 "technical data rights, the right to modify, and the ability to sustain "
-                 "independently of the originating manufacturer.</p>"),
-                ("Workforce development programme",
-                 "<p>Recruitment, training and qualification pipeline for the engineers and "
-                 "technicians an industrial capability depends on.</p>"),
+                 "<p>Design and delivery of an in-country repair facility: capacity, workflow, "
+                 "tooling, test equipment and the technician competence framework.</p>"),
+                ("Local assembly feasibility",
+                 "<p>Which non-weaponized systems could credibly be assembled in Nigeria, what each "
+                 "requires, and the sequencing with the best industrial return.</p>"),
+                ("University partnership design",
+                 "<p>Research agenda, funding model, student pipeline and intellectual property "
+                 "arrangements with Nigerian universities.</p>"),
             ],
         ),
     ]

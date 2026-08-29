@@ -33,20 +33,20 @@ EMAIL_ENQUIRIES = "enquiries@pinnaclepec.com"
 PHONE = "+1 (662) 497-9481"
 
 NAV_CAPABILITIES = [
-    ("engineering-design",       "Defence Engineering Design",  "Secure facilities, C2 spaces, MEP, CAD/BIM"),
-    ("military-construction",    "Military Construction",       "Bases, barracks, logistics hubs, perimeters"),
-    ("defence-supply-chain",     "Defence Supply Chain",        "Vendor qualification, sourcing, inventory control"),
-    ("modernization-consulting", "Modernization Consulting",    "Asset management, IoT, predictive maintenance"),
+    ("engineering-design",       "Defence Engineering Design",  "Secure facilities, MEP, CAD/BIM"),
+    ("military-construction",    "Military Construction",       "Bases, barracks, logistics hubs"),
+    ("defence-supply-chain",     "Defence Supply Chain",        "Vendor qualification, sourcing, inventory"),
+    ("modernization-consulting", "Modernization Consulting",    "Asset management, IoT, maintenance"),
     ("sovereign-cloud-and-ai",   "Sovereign Cloud &amp; AI Infrastructure",
-     "Data classification, landing zones, air-gapped enclaves, sovereign AI"),
+     "Classification, landing zones, sovereign AI"),
 ]
 
 NAV_SECTORS = [
-    ("nigerian-army",             "Nigerian Army",                 "Barracks, training grounds, vehicle hubs"),
-    ("defence-headquarters",      "Ministry of Defence &amp; DHQ", "Joint infrastructure programmes and governance"),
-    ("naval-and-air-installations", "Naval &amp; Air Installations", "Base infrastructure, hangars, secure storage"),
-    ("internal-security",         "Internal Security Agencies",    "Facilities for police and paramilitary services"),
-    ("defence-industrialisation", "Defence Industrialisation",     "Local assembly, maintenance hubs, transfer"),
+    ("nigerian-army",             "Nigerian Army",                 "Barracks, training, vehicle hubs"),
+    ("defence-headquarters",      "Ministry of Defence &amp; DHQ", "Joint programmes and governance"),
+    ("naval-and-air-installations", "Naval &amp; Air Installations", "Base infrastructure, hangars, storage"),
+    ("internal-security",         "Internal Security Agencies",    "Police and paramilitary facilities"),
+    ("defence-industrialisation", "Defence Industrialisation",     "Local assembly, maintenance hubs"),
 ]
 
 ARROW = ('<svg class="btn__arrow" viewBox="0 0 14 14" aria-hidden="true">'
@@ -168,8 +168,7 @@ FOOTER = f'''<footer class="footer">
       <div class="footer__brandblock">
         {BRAND.replace(' aria-label="' + SHORT_NAME + ' Engineering and Consulting, home"', '')}
         <p>
-          A Nigerian engineering and construction firm delivering secure design, military
-          construction, defence supply chain discipline and modernization consulting.
+          Nigerian engineering and construction for defence.
         </p>
         <p style="margin-top:14px">
           {HQ}<br>
@@ -279,8 +278,8 @@ def page_hero(eyebrow, title, lede, trail=(), actions=""):
 
 
 def cta_band(heading="Ready to support defence readiness?",
-             body="Request a capability briefing, proposal discussion, partnership meeting "
-                  "or site assessment."):
+             body="Request a capability briefing, proposal, partnership meeting or site "
+                  "assessment."):
     return f'''  <section class="cta-band">
     <div class="shell cta-band__inner">
       <div>
