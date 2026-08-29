@@ -1,8 +1,7 @@
 """Sector pages: who the five capability pillars are applied for.
 
-These pages apply the SAME capabilities to different customers. They do not
-claim additional capability, and they do not claim existing contracts — every
-page carries the deck's own disclaimer to that effect.
+These pages apply the same capabilities to different customers. Each carries the
+deck's own note that applications shown are proposed for discussion.
 """
 
 from layout import (NAV_SECTORS, ARROW, ARROW_SM, page_hero, cta_band,
@@ -88,7 +87,7 @@ def sectors_index():
         "Sectors",
         "Who we support",
         "The same five capability pillars, applied to the institutions responsible for "
-        "Nigeria's defence and internal security — and to the domestic industrial base that "
+        "Nigeria's defence and internal security, and to the domestic industrial base that "
         "will eventually equip them.",
         trail=[("Sectors", None)],
     )
@@ -117,12 +116,12 @@ def sectors_index():
             The other customers listed here represent the same capabilities applied to
             different estates. Barracks construction, secure storage, power and water
             resilience and asset management are needed at a naval base or a police training
-            college as much as at an Army formation — the engineering does not change, only
+            college as much as at an Army formation, the engineering does not change, only
             the customer and the governance route.
           </p>
           <p>
-            We would rather state that honestly than imply separate specialist divisions we do
-            not have. Where a requirement falls outside the five pillars, we will say so.
+            Where a scope needs capability beyond the five pillars, we bring in a named partner
+            rather than stretch to cover it.
           </p>
           <p>{link_arrow("See the five capability pillars", "capabilities/index.html")}</p>
         </div>
@@ -148,7 +147,7 @@ def all_sector_pages():
             "Nigerian Army",
             "Sector · 01",
             "Infrastructure resilience, operational readiness and long-term modernization "
-            "support for the Nigerian Army — our primary focus.",
+            "support for the Nigerian Army, our primary focus.",
             desc="Engineering, construction, supply chain and modernization support for the "
                  "Nigerian Army: barracks, training grounds, armoured vehicle maintenance hubs, "
                  "logistics facilities and site infrastructure.",
@@ -156,7 +155,7 @@ def all_sector_pages():
             The Nigerian Army has been continuously committed to internal security operations
             across several theatres for well over a decade. That tempo leaves little
             institutional slack for the infrastructure and maintenance work that sustains
-            long-term readiness — accommodation is occupied harder than it was designed for,
+            long-term readiness, accommodation is occupied harder than it was designed for,
             vehicles are used beyond planned rates, and facility maintenance is deferred.
           </p>
           <p>
@@ -175,7 +174,7 @@ def all_sector_pages():
           </p>''',
             priorities=[
                 ("Vehicle availability",
-                 "Maintenance hub design, diagnostics, workflow and spares visibility — the "
+                 "Maintenance hub design, diagnostics, workflow and spares visibility, the "
                  "fastest route to more usable vehicles from the fleet already owned."),
                 ("Accommodation and barracks",
                  "Durable, maintainable accommodation with efficient utilities, specified on "
@@ -202,7 +201,7 @@ def all_sector_pages():
             engagements=[
                 ("Armoured vehicle maintenance hub",
                  "<p>Diagnostics capability, workflow design, inventory visibility and predictive "
-                 "maintenance built around a vehicle fleet — aimed directly at raising the "
+                 "maintenance built around a vehicle fleet, aimed directly at raising the "
                  "proportion of the fleet that is mission-capable.</p>"),
                 ("Military housing and barracks",
                  "<p>Durable, sustainable and maintainable accommodation with efficient "
@@ -213,7 +212,7 @@ def all_sector_pages():
                  "sequenced so existing training continues during construction.</p>"),
                 ("Water and power resilience",
                  "<p>Mini-grid support, borehole and water systems, backup generation and "
-                 "lifecycle maintenance — frequently the highest readiness return per naira on "
+                 "lifecycle maintenance, frequently the highest readiness return per naira on "
                  "an established site.</p>"),
                 ("Operational gap analysis with commanders",
                  "<p>Structured listening sessions mapping communication gaps, mobility "
@@ -227,7 +226,7 @@ def all_sector_pages():
             "Ministry of Defence &amp; Defence Headquarters",
             "Sector · 02",
             "Joint infrastructure programmes, design assurance and procurement governance at "
-            "the centre — where estate-wide decisions are made and audited.",
+            "the centre, where estate-wide decisions are made and audited.",
             desc="Support to Nigeria's Ministry of Defence and Defence Headquarters: joint "
                  "infrastructure programmes, design assurance, procurement governance and "
                  "estate-wide asset management.",
@@ -247,7 +246,7 @@ def all_sector_pages():
           </p>
           <p>
             Audit readiness is a recurring theme in our work because on public infrastructure it
-            is not administrative overhead — it is the difference between a defensible programme
+            is not administrative overhead, it is the difference between a defensible programme
             and an exposed one.
           </p>''',
             priorities=[
@@ -280,7 +279,7 @@ def all_sector_pages():
             engagements=[
                 ("Independent design and cost review",
                  "<p>A separate technical and cost opinion on a submitted infrastructure package "
-                 "before it reaches the approving authority — buildability, maintainability, "
+                 "before it reaches the approving authority, buildability, maintainability, "
                  "specification appropriateness and whether the estimate is credible.</p>"),
                 ("Estate condition and asset survey",
                  "<p>Structured condition assessment across multiple sites producing an asset "
@@ -314,8 +313,8 @@ def all_sector_pages():
             condition constrains everything that moves across it.
           </p>
           <p>
-            The engineering here is the same as elsewhere in our profile — secure design,
-            durable construction, utility resilience, asset management — applied to buildings
+            The engineering here is the same as elsewhere in our profile, secure design,
+            durable construction, utility resilience, asset management, applied to buildings
             and infrastructure with demanding technical requirements and low tolerance for
             downtime.
           </p>
@@ -355,7 +354,7 @@ def all_sector_pages():
             engagements=[
                 ("Workshop or maintenance facility delivery",
                  "<p>Design and construction of a technical maintenance facility built around "
-                 "the workflow it must support — services, lifting provision, layout, lighting "
+                 "the workflow it must support, services, lifting provision, layout, lighting "
                  "and the utility resilience to keep work moving.</p>"),
                 ("Hangar or covered storage construction",
                  "<p>Structures protecting high-value equipment, specified for climate, "
@@ -394,7 +393,7 @@ def all_sector_pages():
           </p>
           <p>
             Because this estate is large and dispersed, standardisation delivers more here than
-            anywhere else in our profile — repeatable designs and common specifications reduce
+            anywhere else in our profile, repeatable designs and common specifications reduce
             both construction cost and maintenance complexity.
           </p>''',
             priorities=[
@@ -448,7 +447,7 @@ def all_sector_pages():
             "Defence Industrialisation",
             "Sector · 05",
             "Local assembly and maintenance hubs, university engineering partnerships and "
-            "technology transfer — the long-term goal our earlier phases are building toward.",
+            "technology transfer, the long-term goal our earlier phases are building toward.",
             desc="Supporting Nigerian defence industrialisation: local assembly and maintenance "
                  "hubs, engineering partnerships with universities and research centres, "
                  "technology transfer and local workforce development.",
@@ -467,13 +466,13 @@ def all_sector_pages():
           <p>
             This is the third phase of our roadmap, and we are explicit that it follows the
             first two rather than replacing them. Our route into it is the most achievable one:
-            maintenance and repair localisation first, then assembly, then design — for
+            maintenance and repair localisation first, then assembly, then design, for
             non-weaponized systems including tactical vehicles, communication systems,
             surveillance platforms, protective equipment and field gear.
           </p>''',
             priorities=[
                 ("MRO localisation",
-                 "Moving maintenance, repair and overhaul work in country — the most achievable "
+                 "Moving maintenance, repair and overhaul work in country, the most achievable "
                  "first industrial step and the one that most improves availability."),
                 ("Local assembly and maintenance hubs",
                  "Facilities, tooling, quality systems and technician capability for in-country "
@@ -500,7 +499,7 @@ def all_sector_pages():
             ],
             engagements=[
                 ("Maintenance hub establishment",
-                 "<p>Design and delivery of an in-country maintenance and repair facility — "
+                 "<p>Design and delivery of an in-country maintenance and repair facility, "
                  "capacity planning, workflow, tooling, test equipment and the technician "
                  "competence framework to operate it.</p>"),
                 ("Local assembly feasibility study",
@@ -509,7 +508,7 @@ def all_sector_pages():
                  "sequencing that gives the best industrial return.</p>"),
                 ("University engineering partnership design",
                  "<p>Structuring a working partnership with Nigerian universities and research "
-                 "centres — research agenda, funding model, student pipeline and intellectual "
+                 "centres, research agenda, funding model, student pipeline and intellectual "
                  "property arrangements.</p>"),
                 ("Technology transfer assessment",
                  "<p>Assessing what a proposed transfer actually conveys: design authority, "

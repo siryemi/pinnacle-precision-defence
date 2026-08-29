@@ -1,6 +1,6 @@
 """The phased engagement roadmap.
 
-Content source: "Pitch on 3 phases.pdf" — short-term support, mid-term
+Content source: "Pitch on 3 phases.pdf", short-term support, mid-term
 collaboration, long-term indigenous capability, plus the value proposition.
 """
 
@@ -94,12 +94,12 @@ def roadmap_page():
         <p class="eyebrow">Phase two · mid term</p>
         <h2 class="d2">Joint problem-solving with commanders</h2>
         <p class="lede mt-16">
-          Identify operational gaps and co-develop tailored solutions — addressing deeper
+          Identify operational gaps and co-develop tailored solutions, addressing deeper
           challenges and beginning capability expansion.
         </p>
       </div>
       {accordion("phase2", [
-          ("A — Operational gap analysis",
+          ("A. Operational gap analysis",
            "<p>Structured listening sessions with unit commanders to uncover the challenges "
            "that do not appear in formal reporting, then mapping them into addressable "
            "operational domains.</p>"
@@ -111,13 +111,13 @@ def roadmap_page():
            "<li>Maintenance challenges</li></ul>"
            "<p>Output is a tailored solution set for each operational domain, prioritised by "
            "readiness impact.</p>"),
-          ("B — High-level capability requirements",
+          ("B. High-level capability requirements",
            "<p>Safe, non-operational discussions on capability needs, helping the military "
            "define purpose-based requirements without crossing into restricted operational "
            "guidance.</p>"
            "<p>Topics in scope:</p><ul>"
            "<li>What drones are needed for ISR, logistics or surveillance</li>"
-           "<li>What aircraft capabilities — range, endurance, payload — missions require</li>"
+           "<li>What aircraft range, endurance and payload missions require</li>"
            "<li>What non-weaponized missile-defence detection systems are needed</li>"
            "<li>What technical specifications matter for procurement decisions</li></ul>"
            "<p>This is requirements definition, not operational advice and not the supply of "
@@ -132,7 +132,7 @@ def roadmap_page():
         <p class="eyebrow">Phase three · long term</p>
         <h2 class="d2">A Nigerian defence-industry ecosystem</h2>
         <p class="lede mt-16">
-          Built on engineering, design and manufacturing — positioning the firm as a strategic
+          Built on engineering, design and manufacturing, positioning the firm as a strategic
           partner in Nigeria's modernization journey rather than a supplier of imports.
         </p>
       </div>
@@ -191,7 +191,7 @@ def roadmap_page():
       <div class="mt-56">
         <div class="quote">
           <p>
-            We want to be a dependable partner in Nigeria's modernization journey — starting
+            We want to be a dependable partner in Nigeria's modernization journey, starting
             with support today and growing into full indigenous capability tomorrow.
           </p>
           <cite>Pinnacle Precision Engineering &amp; Consulting Limited</cite>

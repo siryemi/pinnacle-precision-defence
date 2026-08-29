@@ -105,9 +105,9 @@ def capabilities_index():
     body = page_hero(
         "Capabilities",
         "Five capability pillars for defence infrastructure and modernization",
-        "Secure engineering design, reliable construction, disciplined supply chain management "
-        "and modernization consulting — framed for defence stakeholders as secure, "
-        "maintainable, auditable and readiness-oriented delivery at every stage.",
+        "Secure engineering design, reliable construction, disciplined supply chains, "
+        "modernization consulting and sovereign cloud. Delivery that is secure, maintainable "
+        "and auditable at every stage.",
         trail=[("Capabilities", None)],
     )
 
@@ -179,8 +179,9 @@ def capabilities_index():
 ''' + cta_band()
 
     return ("capabilities/index.html", "Capabilities",
-            "Four defence-aligned capability pillars: engineering design, military "
-            "construction, defence supply chain and modernization consulting.",
+            "Five defence-aligned capability pillars: engineering design, military "
+            "construction, defence supply chain, modernization consulting, and sovereign "
+            "cloud and AI infrastructure.",
             body)
 
 
@@ -206,7 +207,7 @@ def all_capability_pages():
           </p>
           <p>
             We take those requirements into the design from the outset and carry them through
-            documented, reviewable stages — front-end engineering design, through detailed
+            documented, reviewable stages, front-end engineering design, through detailed
             design, to issued-for-construction packages. The deliverable is a coordinated set
             of drawings and models that a construction team can build from and that the client's
             own engineers can maintain against for the life of the asset.
@@ -248,9 +249,9 @@ def all_capability_pages():
                  "<li>Options studied and compared before a design is fixed</li>"
                  "<li>Cost logic documented so the estimate can be interrogated</li></ul>"),
                 ("Design assurance on an existing package",
-                 "<p>Independent multi-discipline review of a design already produced — "
+                 "<p>Independent multi-discipline review of a design already produced, "
                  "buildability, maintainability, security requirements, MEP coordination and "
-                 "compliance — delivered as a prioritised comment register.</p>"),
+                 "compliance, delivered as a prioritised comment register.</p>"),
                 ("BIM implementation for an estate",
                  "<p>Establishing a BIM standard and model structure for a facility or estate so "
                  "that asset data captured during design remains usable by the maintenance "
@@ -279,7 +280,7 @@ def all_capability_pages():
             "Military Construction",
             "Capability · Pillar 02",
             "Planning, design and delivery support for facilities where downtime is not an "
-            "option — built secure-by-design, maintainable-by-design and audit-ready from day one.",
+            "option, built secure-by-design, maintainable-by-design and audit-ready from day one.",
             desc="Military construction: bases, barracks, training grounds, logistics hubs, "
                  "perimeter infrastructure, secure storage and civil and structural works.",
             intro='''          <p>
@@ -322,7 +323,7 @@ def all_capability_pages():
             engagements=[
                 ("Barracks and accommodation programme",
                  "<p>Delivery of durable, sustainable and maintainable accommodation with "
-                 "efficient utilities — specified so that whole-life cost, not capital cost "
+                 "efficient utilities, specified so that whole-life cost, not capital cost "
                  "alone, drives the material and system choices.</p>"),
                 ("Training facility construction",
                  "<p>Ranges, classrooms, workshops and simulation rooms with the supporting "
@@ -334,7 +335,7 @@ def all_capability_pages():
                  "layouts.</p>"),
                 ("Water and power resilience works",
                  "<p>Mini-grid support, borehole and water systems, backup generation and the "
-                 "lifecycle maintenance regime to keep them running — frequently the highest "
+                 "lifecycle maintenance regime to keep them running, frequently the highest "
                  "readiness return per naira on an established site.</p>"),
                 ("Perimeter and site infrastructure upgrade",
                  "<p>Perimeter works, roads, drainage and utility distribution on an operational "
@@ -362,7 +363,7 @@ def all_capability_pages():
             "defence-supply-chain",
             "Defence Supply Chain",
             "Capability · Pillar 03",
-            "Procurement discipline and inventory visibility — readiness-focused support built "
+            "Procurement discipline and inventory visibility, readiness-focused support built "
             "around accountability at every handoff.",
             desc="Defence supply chain services: vendor qualification, strategic sourcing, "
                  "inventory control, transport and logistics, and lifecycle support for "
@@ -382,7 +383,7 @@ def all_capability_pages():
           </p>
           <p>
             <strong>Scope:</strong> this work covers non-sensitive equipment, materials, spares
-            and services — including the categories set out in our phased roadmap, such as
+            and services, including the categories set out in our phased roadmap, such as
             radios, protective equipment, tactical uniforms, vehicles and surveillance tools. We
             supply and coordinate; we hold ourselves to documented traceability and
             quality-assurance systems on everything that moves through the pipeline.
@@ -411,8 +412,8 @@ def all_capability_pages():
             engagements=[
                 ("Hardware selection and specification",
                  "<p>Expert guidance on choosing reliable, mission-appropriate equipment across "
-                 "non-weaponized, high-impact categories — radios, body armour, tactical "
-                 "uniforms, vehicles and surveillance tools — delivered as comparison matrices, "
+                 "non-weaponized, high-impact categories, radios, body armour, tactical "
+                 "uniforms, vehicles and surveillance tools, delivered as comparison matrices, "
                  "technical specifications and suitability assessments.</p>"),
                 ("Procurement pipeline establishment",
                  "<p>Building a streamlined procurement pipeline for vetted equipment: trusted "
@@ -466,7 +467,7 @@ def all_capability_pages():
             "Modernization Consulting",
             "Capability · Pillar 04",
             "Transforming existing engineering and asset management practice with data-driven "
-            "tools — and making sure the maintenance team actually uses them.",
+            "tools, and making sure the maintenance team actually uses them.",
             desc="Modernization consulting: risk assessment, asset management, lifecycle cost "
                  "analysis, digital transformation, IoT condition monitoring and predictive "
                  "maintenance for defence assets.",
@@ -508,8 +509,8 @@ def all_capability_pages():
             ],
             engagements=[
                 ("Predictive maintenance pilot",
-                 "<p>A bounded pilot on a defined asset class — instrumentation, baseline data "
-                 "capture, analytics and a decision workflow — sized so the client can judge the "
+                 "<p>A bounded pilot on a defined asset class, instrumentation, baseline data "
+                 "capture, analytics and a decision workflow, sized so the client can judge the "
                  "return before committing to a wider rollout.</p>"
                  "<p><em>Illustrative example:</em> predictive maintenance analytics can flag "
                  "early signs of component wear, such as bearing degradation, before failure, "
@@ -523,8 +524,8 @@ def all_capability_pages():
                  "model, with the data structure and training needed for the client's team to "
                  "run it.</p>"),
                 ("Infrastructure risk assessment",
-                 "<p>Assessment of an estate's infrastructure risk — power, water, structural "
-                 "condition, fire, access — prioritised by operational consequence and costed "
+                 "<p>Assessment of an estate's infrastructure risk, power, water, structural "
+                 "condition, fire, access, prioritised by operational consequence and costed "
                  "for remediation.</p>"),
                 ("Digital readiness review",
                  "<p>Where BIM, IoT and analytics would genuinely help, and where they would add "
@@ -553,15 +554,15 @@ def all_capability_pages():
             "sovereign-cloud-and-ai",
             "Sovereign Cloud &amp; AI Infrastructure",
             "Capability · Pillar 05",
-            "We do not host government data. We engineer and assure the environment that is "
-            "permitted to — and design the AI capability that runs inside it.",
+            "Sovereign environments built to Nigeria's classification rules, and the AI "
+            "capability that runs inside them.",
             desc="Sovereign cloud and AI infrastructure advisory: data classification and "
                  "workload placement under Nigeria's cloud instruments, landing zone design, "
                  "air-gapped enclaves, continuous compliance evidence and in-country AI.",
             intro='''          <p>
             Nigeria has written the rules but not the reference architectures. The National
             Cloud Technical Guideline 2026 and the National Guideline for Cloud Computing in
-            Nigeria 2026 — both mandatory, both effective 1 January 2027 — establish a data
+            Nigeria 2026, both mandatory, both effective 1 January 2027, establish a data
             classification model from Level 1 to Level 4. Level 4 includes military
             intelligence, must remain within Nigeria's territorial boundary under all
             circumstances, and must sit on-premises or in a certified private cloud. For Level 2
@@ -571,7 +572,7 @@ def all_capability_pages():
           <p>
             Those requirements do not prevent a Nigerian institution from using global cloud
             capability. They determine <em>where the data rests</em> and <em>who can reach
-            it</em> — which is an architecture problem, not a prohibition. Dedicated in-country
+            it</em>, which is an architecture problem, not a prohibition. Dedicated in-country
             infrastructure, vendor hardware installed in a Nigerian facility, and ruggedised
             edge compute for forward sites all keep data resident while the platform and its
             services remain the same.
@@ -581,15 +582,14 @@ def all_capability_pages():
             workloads, designing the landing zone and the residency guardrails that enforce
             classification technically rather than by policy, specifying key custody so keys
             stay in Nigerian hands, and engineering the facility the whole thing sits in. That
-            last part is why this sits with us rather than with a software consultancy — a
+            last part is why this sits with us rather than with a software consultancy, a
             cloud practice cannot design the power train, the cooling plant or the physical
             security envelope, and the instruments require all three.
           </p>
           <p>
-            <strong>Our position is vendor-neutral.</strong> We hold no reseller relationship
-            and we are not a cloud service provider, a data centre operator or a hosting
-            provider. We do not host, process or store client data, and we do not hold or
-            manage client encryption keys. We advise, design, assure and integrate.
+            <strong>We are provider agnostic.</strong> We design to the requirement, then fit
+            the platform to it. Our work is advisory, design, assurance and integration. The
+            client owns the environment and holds its keys.
           </p>''',
             workstreams=[
                 ("Data classification and workload placement",
@@ -598,7 +598,7 @@ def all_capability_pages():
                  "every later decision depends on."),
                 ("Sovereign landing zone design",
                  "Account and organisation structure, network segregation, identity, logging and "
-                 "residency guardrails enforced technically — so a workload cannot be deployed "
+                 "residency guardrails enforced technically, so a workload cannot be deployed "
                  "to a non-compliant location even by mistake."),
                 ("Access architecture",
                  "Authorised ingress and authorised egress as named, designed capabilities, with "
@@ -628,7 +628,7 @@ def all_capability_pages():
                  "region, what must stay in Nigeria, what must be air-gapped, and what the "
                  "migration sequence should be.</p><ul>"
                  "<li>Deliverable is a decision document, not a procurement recommendation</li>"
-                 "<li>No warranty of regulatory outcome — the institution and its counsel own "
+                 "<li>No warranty of regulatory outcome, the institution and its counsel own "
                  "any submission to the regulator</li></ul>"),
                 ("Sovereign landing zone design",
                  "<p>Design of the account structure, network segregation, identity model, "
@@ -636,8 +636,7 @@ def all_capability_pages():
                  "classification enforceable in code. Delivered as a documented design plus "
                  "reusable infrastructure definitions the institution owns.</p>"
                  "<p>Where an institution runs many agencies, this becomes a reusable baseline "
-                 "each one inherits — which is materially cheaper than every programme "
-                 "designing its own.</p>"),
+                 "each one inherits. Far cheaper than every programme designing its own.</p>"),
                 ("Air-gapped enclave design for classified workloads",
                  "<p>Design of a disconnected environment for Level 4 data: platform selection, "
                  "update and patch pathway without external connectivity, backup and recovery, "
@@ -651,7 +650,7 @@ def all_capability_pages():
                  "permitted to use, what infrastructure that requires in country, and the "
                  "governance framework needed before a model influences any decision.</p>"),
                 ("Edge compute for forward operating bases",
-                 "<p>Design of ruggedised, low-bandwidth-tolerant compute for dispersed sites — "
+                 "<p>Design of ruggedised, low-bandwidth-tolerant compute for dispersed sites, "
                  "local processing, deferred synchronisation, and physical and environmental "
                  "protection appropriate to the location.</p>"),
             ],
@@ -758,7 +757,7 @@ def all_capability_pages():
           </g>
 
           <!-- 06 FACILITY -->
-          <text x="34" y="494" fill="#C9A227" font-family="monospace" font-size="9">06 · FACILITY — OUR ENGINEERING CORE</text>
+          <text x="34" y="494" fill="#C9A227" font-family="monospace" font-size="9">06 · FACILITY, OUR ENGINEERING CORE</text>
           <rect x="34" y="502" width="656" height="46" rx="2" fill="rgba(201,162,39,0.10)" stroke="#C9A227" stroke-width="1.6"/>
           <text x="362" y="530" fill="#C9A227" font-family="monospace" font-size="9.5" text-anchor="middle">POWER · COOLING · EARTHING &amp; LPS · PHYSICAL SECURITY · RESILIENCE</text>
 
@@ -783,9 +782,9 @@ def all_capability_pages():
           <p class="eyebrow">Artificial intelligence</p>
           <h2 class="d2">AI is a data-governance problem before it is a technology problem</h2>
           <p class="lede mt-16">
-            The constraint on defence AI in Nigeria is not model availability. It is which data
-            a model may lawfully be trained on and where that training may physically happen —
-            which returns directly to classification and residency.
+            The constraint on defence AI in Nigeria is not model availability. It is which
+            data a model may lawfully be trained on, and where that training may physically
+            happen. Both come back to classification and residency.
           </p>
           <p class="mt-24">
             Nigeria's own cloud instruments already name AI infrastructure providers and
@@ -799,9 +798,9 @@ def all_capability_pages():
             <div class="ruled__row">
               <h3>In-country AI infrastructure</h3>
               <p>Training and inference on infrastructure physically resident in Nigeria, so
-              classified and restricted data never has to leave to be useful. Includes the
-              power and cooling design that accelerated compute actually demands — which is a
-              materially different thermal problem from general-purpose servers.</p>
+              classified and restricted data never has to leave to be useful. Includes the power
+              and cooling that accelerated compute demands, which is a different thermal problem
+              from general-purpose servers.</p>
             </div>
             <div class="ruled__row">
               <h3>Permitted-data determination</h3>
@@ -832,31 +831,27 @@ def all_capability_pages():
     <div class="shell">
       <div class="split">
         <div>
-          <p class="eyebrow">Honest position</p>
-          <h2 class="d2">What we are, and what we are not</h2>
+          <p class="eyebrow">How we work</p>
+          <h2 class="d2">Design and assurance, with the client in control</h2>
           <p class="lede mt-16">
-            This pillar is newer than the four it sits on. Stating its limits plainly is what
-            makes the rest of the page worth reading.
+            Our role is to classify the workloads, design the environment, assure the build and
+            engineer the facility around it. The client owns the design, the data and the keys.
           </p>
         </div>
         <div class="prose">
-          <p><strong>We are:</strong> an engineering and consulting firm that classifies
-          workloads, designs sovereign environments and the facilities that host them, and
-          designs the governance around AI.</p>
-          <p><strong>We are not:</strong> a cloud service provider, a data centre operator, a
-          hosting provider, a reseller, or a certification body. We hold no assurance
-          certification for operating national digital infrastructure, and we do not claim a
-          path to one.</p>
-          <p><strong>We do not:</strong> host, process or store client data; hold or manage
-          client encryption keys; or perform audit or attestation functions on our own work.</p>
           <p>
-            Partner standing and certified engineering headcount for this pillar:
-            <span class="todo">TODO: state cloud partner tier and number of certified
-            architects, or remove this pillar from the site until it can be stated</span>.
+            We are provider agnostic by choice. It keeps the platform decision open until the
+            requirement is written. That is the right order, and usually the cheaper one.
           </p>
           <p>
-            Where a requirement needs capability we do not hold, we say so and propose a named
-            joint venture rather than stretching to cover it.
+            On larger programmes we work in joint venture and name the partner in the bid. That
+            gives a client one accountable design authority and the specialist depth the scope
+            needs.
+          </p>
+          <p>
+            Cloud partner standing and certified engineering headcount for this pillar:
+            <span class="todo">TODO: state cloud partner tier and number of certified
+            architects</span>.
           </p>
         </div>
       </div>

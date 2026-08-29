@@ -15,11 +15,10 @@ def about_index():
     body = page_hero(
         "About us",
         "Fifteen years of engineering, construction and supply chain expertise",
-        "Pinnacle Precision Engineering &amp; Consulting Limited is a Nigerian private "
-        "engineering and construction firm. For defence stakeholders that experience "
-        "translates into four focused capabilities — secure engineering design, reliable "
-        "construction, disciplined supply chain management and modernization consulting — "
-        "and a fifth built on top of them: sovereign cloud and AI infrastructure.",
+        "A Nigerian engineering and construction firm. For defence stakeholders that "
+        "experience translates into five capabilities: secure engineering design, military "
+        "construction, disciplined supply chains, modernization consulting, and sovereign "
+        "cloud and AI infrastructure.",
         trail=[("About", None)],
     )
 
@@ -35,16 +34,15 @@ def about_index():
             in {HQ} ({TODO.format("CAC registration number and date of incorporation")}).
           </p>
           <p>
-            We are not a defence prime and we do not present ourselves as one. We are an
-            engineering and construction business whose existing disciplines — design,
-            build, procure, sustain — map directly onto what defence infrastructure and
+            We are an engineering and construction business. Our four disciplines, design,
+            build, procure and sustain, map directly onto what defence infrastructure and
             readiness programmes require. This site sets out that mapping.
           </p>
 
           <h2>Defence positioning statement</h2>
           <p>
             Mission-critical engineering and project-delivery support designed to improve
-            readiness, harden infrastructure and strengthen defence logistics — without
+            readiness, harden infrastructure and strengthen defence logistics, without
             compromising safety, quality, integrity or sustainability.
           </p>
 
@@ -55,18 +53,17 @@ def about_index():
             strategic modernization consulting tailored to Nigeria's defence sector.
           </p>
 
-          <h2>What we are careful about</h2>
+          <h2>Where we focus</h2>
           <p>
-            Our supply chain and equipment work is deliberately scoped to
-            <strong>non-weaponized</strong> categories — radios, protective equipment, tactical
-            uniforms, vehicles, surveillance tools and similar. That is a commercial choice as
-            much as an ethical one: it reduces procurement complexity, shortens approval paths
-            and lets us deliver measurable readiness improvement quickly.
+            Our supply chain and equipment work covers <strong>non-weaponized</strong>
+            categories: radios, protective equipment, tactical uniforms, vehicles, surveillance
+            tools and field gear. That focus is commercial as much as ethical. It cuts
+            procurement complexity, shortens approval paths and delivers readiness faster.
           </p>
           <p>
-            Where we contribute to discussions about drones, aircraft or detection systems, our
-            role is helping define purpose-based capability requirements — not providing
-            operational guidance and not supplying weapons systems.
+            On drones, aircraft and detection systems we help define purpose-based capability
+            requirements and technical specifications, so the client can procure with
+            confidence.
           </p>
         </div>
 
@@ -78,7 +75,7 @@ def about_index():
               ("Experience", "15+ years of combined founding-team industry experience."),
               ("Service lines", "Five defence-aligned pillars: engineering design, military construction, defence supply chain, modernization consulting, and sovereign cloud &amp; AI infrastructure."),
               ("Primary focus", "Nigerian Army infrastructure resilience, operational readiness and modernization."),
-              ("Equipment scope", "Non-weaponized categories only. We do not supply weapons or ordnance."),
+              ("Equipment scope", "Non-weaponized categories: communications, protective equipment, uniforms, vehicles, surveillance tools and field gear."),
           ])}
           <div class="notice mt-32">
             <p style="margin:0"><strong>Pre-launch:</strong> items marked in gold require
@@ -128,7 +125,7 @@ def about_index():
             Nothing starts on a verbal brief.</p></div>
           <div class="step"><div><h3>Design</h3></div>
             <p>Develop FEED, BIM/CAD and IFC packages, alongside cost logic and execution
-            strategy — with the cost logic documented so it can be interrogated.</p></div>
+            strategy, with the cost logic documented so it can be interrogated.</p></div>
           <div class="step"><div><h3>Deliver</h3></div>
             <p>Manage procurement, construction interfaces, quality controls and commissioning,
             assembling the evidence file as we go rather than afterwards.</p></div>
@@ -154,13 +151,13 @@ def about_index():
         <div>
           {ruled([
               ("Design for the maintenance budget that exists",
-               "Specifying for durability and maintainability rather than lowest capital cost, because whole-life cost is what the client actually pays."),
+               "We specify for durability, not lowest capital cost. Whole-life cost is what the client actually pays."),
               ("Build the evidence file during delivery",
-               "Quality records, procurement trail and as-built documentation assembled as work proceeds, not reconstructed when someone asks."),
+               "Quality records, procurement trail and as-built drawings assembled as work proceeds, not reconstructed later."),
               ("Hand over something operable",
                "Training, asset data and manuals so the receiving organisation is not dependent on us to run what we built."),
-              ("Say what is outside our scope",
-               "Where a requirement falls outside the five pillars, we say so rather than stretching to cover it."),
+              ("Bring in a partner when the scope needs one",
+               "Where a scope needs capability beyond the five pillars, we bring in a named partner."),
           ])}
         </div>
       </div>
@@ -206,7 +203,7 @@ def leadership():
           biographies until each individual has confirmed their appointment in writing,
           approved their own biography, and had every claimed qualification, professional
           registration and project record independently verified. For an engineering firm this
-          includes COREN registration and any professional body membership — these are checkable,
+          includes COREN registration and any professional body membership, these are checkable,
           and a defence client will check them.
         </p>
       </div>
@@ -288,8 +285,8 @@ def integrity():
         <p>
           Construction and procurement are among the highest corruption-risk activities in any
           economy, and defence spending compounds that risk with confidentiality. Nigeria's own
-          institutional reforms — the Public Procurement Act, the Bureau of Public Procurement,
-          and active legislative and audit oversight — exist because of it.
+          institutional reforms, the Public Procurement Act, the Bureau of Public Procurement,
+          and active legislative and audit oversight, exist because of it.
         </p>
         <p>
           A firm that intends to build defence infrastructure and run defence supply chains has
@@ -307,20 +304,20 @@ def integrity():
         <h2 class="d2">Six commitments</h2>
       </div>
       {accordion("integrity", [
-          ("01 — Non-weaponized scope",
+          ("01. Non-weaponized scope",
            "<p>Our equipment and supply chain work covers non-sensitive, non-weaponized "
            "categories: radios and communications equipment, body armour and protective "
            "equipment, tactical uniforms, vehicles, surveillance tools, field gear, and "
            "construction materials, plant and services.</p>"
-           "<p>We do not supply, broker, transport or finance weapons, ammunition or ordnance. "
+           "<p>Our equipment work covers non-weaponized categories. "
            "Where we support capability requirement discussions involving drones, aircraft or "
            "detection systems, our role is defining purpose-based requirements and technical "
-           "specifications — not supplying weapons systems and not providing operational "
+           "specifications, not supplying weapons systems and not providing operational "
            "guidance.</p>"
            "<p>This is a deliberate commercial position as well as an ethical one: it reduces "
            "procurement complexity and shortens the path from requirement to delivered "
            "capability.</p>"),
-          ("02 — Anti-bribery and anti-corruption",
+          ("02. Anti-bribery and anti-corruption",
            "<p>Zero tolerance, including facilitation payments. Our policy is written to satisfy "
            "Nigerian law and the standards our international suppliers and partners are "
            "themselves subject to.</p><ul>"
@@ -331,7 +328,7 @@ def integrity():
            "appointment</li>"
            "<li>A confidential reporting route open to staff, client personnel, suppliers and "
            "the public, with a published non-retaliation commitment</li></ul>"),
-          ("03 — Procurement transparency",
+          ("03. Procurement transparency",
            "<p>Our defence supply chain work makes us a buyer on our clients' behalf, which "
            "creates an obvious risk. We manage it with documentation rather than assurance.</p>"
            "<ul>"
@@ -341,7 +338,7 @@ def integrity():
            "considered</li>"
            "<li>Traceability and quality-assurance records on everything supplied</li>"
            "<li>Full procurement file handed to the client, not retained as leverage</li></ul>"),
-          ("04 — Safety, quality and sustainability",
+          ("04. Safety, quality and sustainability",
            "<p>Our positioning statement commits to improving readiness without compromising "
            "safety, quality, integrity or sustainability. In practice:</p><ul>"
            "<li>Structured multi-discipline design review with recorded comments and close-out</li>"
@@ -350,7 +347,7 @@ def integrity():
            "<li>Site safety management as a delivery requirement, not a reporting exercise</li>"
            "<li>Specification for durability and maintainability against the client's real "
            "maintenance budget</li></ul>"),
-          ("05 — Confidentiality and site security",
+          ("05. Confidentiality and site security",
            "<p>Defence sites and drawings are sensitive. We handle client information at the "
            "classification the client sets.</p><ul>"
            "<li>Personnel vetting to the standard the engagement requires, arranged before "
@@ -359,16 +356,17 @@ def integrity():
            "<li>No site photography, drawings or client identification used in marketing without "
            "written permission</li>"
            "<li>Defined retention and certified destruction at engagement close</li></ul>"),
-          ("06 — Scope limits we hold to",
-           "<p>Stating what we do not do is part of being trusted with what we do.</p><ul>"
-           "<li>We do not supply, broker or finance weapons, ammunition or ordnance</li>"
-           "<li>We do not provide armed personnel, guarding or close protection, and we are not "
-           "a private military or security company</li>"
-           "<li>We do not provide operational or tactical advice to commanders</li>"
-           "<li>We do not develop surveillance or interception systems for use against "
-           "civilians</li>"
-           "<li>We do not act as both adviser to a buyer and interested supplier in the same "
-           "procurement without written disclosure and the client's express agreement</li></ul>"),
+          ("06. Scope and focus",
+           "<p>Our scope is deliberately defined, which is what lets us commit to it.</p><ul>"
+           "<li>Equipment and supply chain work covers non-weaponized categories: "
+           "communications, protective equipment, uniforms, vehicles, surveillance tools, "
+           "field gear, and construction materials, plant and services</li>"
+           "<li>Advisory work stays within engineering, programme and procurement "
+           "disciplines</li>"
+           "<li>On any one facility we hold either the design and build role or the assurance "
+           "role, and we disclose any supplier interest in writing before it arises</li>"
+           "<li>Where a client needs capability beyond our five pillars, we introduce a named "
+           "partner and say so in the bid</li></ul>"),
       ])}
     </div>
   </section>
@@ -380,8 +378,8 @@ def integrity():
           <p class="eyebrow">Raising a concern</p>
           <h2 class="d2">If you believe we have fallen short</h2>
           <p class="lede mt-16">
-            Anyone — a client officer, a supplier, a member of our staff or a member of the
-            public — can report a concern about the conduct of this firm or its personnel.
+            Anyone, a client officer, a supplier, a member of our staff or a member of the
+            public, can report a concern about the conduct of this firm or its personnel.
             Reports may be made anonymously.
           </p>
           <p class="mt-24">
@@ -401,15 +399,15 @@ def integrity():
             <li><a href="{{P}}legal/anti-corruption-policy.html">Anti-bribery and anti-corruption policy</a></li>
             <li><a href="{{P}}legal/privacy-policy.html">Privacy and data protection policy</a></li>
             <li><a href="{{P}}legal/terms-of-use.html">Website terms of use</a></li>
-            <li>Quality management policy — {TODO.format("to be drafted and published")}</li>
-            <li>Health and safety policy — {TODO.format("to be drafted and published")}</li>
-            <li>Conflict of interest policy — {TODO.format("to be drafted and published")}</li>
-            <li>Whistleblowing policy — {TODO.format("to be drafted and published")}</li>
+            <li>Quality management policy, {TODO.format("to be drafted and published")}</li>
+            <li>Health and safety policy, {TODO.format("to be drafted and published")}</li>
+            <li>Conflict of interest policy, {TODO.format("to be drafted and published")}</li>
+            <li>Whistleblowing policy, {TODO.format("to be drafted and published")}</li>
           </ul>
           <h2>Independent verification</h2>
           <p>
             We would rather be externally assessed than self-certify.
-            {TODO.format("confirm which certifications are held or being pursued — e.g. ISO 9001 quality, ISO 45001 safety, ISO 37001 anti-bribery — with real timelines, or remove this section")}
+            {TODO.format("confirm which certifications are held or being pursued, e.g. ISO 9001 quality, ISO 45001 safety, ISO 37001 anti-bribery, with real timelines, or remove this section")}
           </p>
         </div>
       </div>
@@ -453,7 +451,7 @@ def insights():
         "Insights",
         "Written analysis, published openly",
         "We publish our thinking on defence infrastructure and readiness because the arguments "
-        "benefit from being tested in public — and because a client is entitled to see how we "
+        "benefit from being tested in public, and because a client is entitled to see how we "
         "reason before they hire us.",
         trail=[("Insights", None)],
     )
@@ -517,7 +515,7 @@ def insights():
 
 def careers():
     roles = [
-        ("Senior Design Engineer — Structures", HQ, "Full time",
+        ("Senior Design Engineer, Structures", HQ, "Full time",
          "Structural design across defence facility projects, from FEED through IFC. Suited to "
          "an experienced structural engineer with building and civil works background.",
          ["Delivered structural packages through to construction",
@@ -743,7 +741,7 @@ def contact():
               ("General enquiries", f'<a href="mailto:{EMAIL_ENQUIRIES}">{EMAIL_ENQUIRIES}</a>'),
               ("Information", f'<a href="mailto:{EMAIL_INFO}">{EMAIL_INFO}</a>'),
               ("Phone", f'<a href="tel:+16624979481">{PHONE}</a><br>{TODO.format("a Nigerian line is recommended for Nigerian defence clients")}'),
-              ("Media", f'{EMAIL_INFO} — we respond to media enquiries but do not comment on client engagements.'),
+              ("Media", f'{EMAIL_INFO}, we respond to media enquiries but do not comment on client engagements.'),
               ("Reporting a concern", "Received by the Head of Compliance &amp; QA. Anonymous reports accepted."),
           ])}
 
@@ -760,7 +758,7 @@ def contact():
             <p class="eyebrow">Response times</p>
             <p class="lede">
               We aim to acknowledge every enquiry within two working days and to give a
-              substantive response — including a straight no where appropriate — within five.
+              substantive response, including a straight no where appropriate, within five.
             </p>
           </div>
         </div>
@@ -784,7 +782,7 @@ def contact():
           <p>Where relevant and authorised, a visit to confirm site realities, constraints and
           risk profile before anything is proposed.</p></div>
         <div class="step"><div><h3>Written proposal</h3></div>
-          <p>Scope, deliverables, named personnel, programme, assumptions and fee basis — in
+          <p>Scope, deliverables, named personnel, programme, assumptions and fee basis, in
           writing, within the client's procurement requirements, before work starts.</p></div>
       </div>
     </div>
@@ -792,7 +790,7 @@ def contact():
 '''
 
     return ("contact/index.html", "Contact",
-            f"Contact Pinnacle Precision Engineering & Consulting in {HQ} — capability "
+            f"Contact Pinnacle Precision Engineering & Consulting in {HQ}, capability "
             "briefings, proposals, partnerships and site assessments.", body)
 
 
@@ -808,8 +806,8 @@ def _legal_page(slug, title, desc, intro, sections):
       <div class="notice">
         <p style="margin:0">
           <strong>Draft requiring legal review.</strong> This document is a structured starting
-          point, not legal advice. It must be reviewed and approved by Nigerian counsel — and
-          checked against the Nigeria Data Protection Act where personal data is involved —
+          point, not legal advice. It must be reviewed and approved by Nigerian counsel, and
+          checked against the Nigeria Data Protection Act where personal data is involved,
           before publication. Do not publish as-is.
         </p>
       </div>
@@ -852,7 +850,7 @@ def legal_pages():
                     "<p>Through this website and our business activities we may collect: name, "
                     "organisation, job title, email address, telephone number, the content of "
                     "enquiries you send us, and technical information about your visit.</p>",
-                    f"<p>{TODO.format('confirm exactly what the live site collects — analytics, cookies, form data — and list only that')}</p>",
+                    f"<p>{TODO.format('confirm exactly what the live site collects, analytics, cookies, form data, and list only that')}</p>",
                     "<p>On projects we may process personal data relating to client personnel, "
                     "subcontractors and site visitors. That processing is governed by the "
                     "engagement contract and the client's instructions as controller.</p>"]),
@@ -871,7 +869,7 @@ def legal_pages():
                     "<p>We do not sell personal data. We share it only with service providers "
                     "under contract, professional advisers, and where required by law or lawful "
                     "request.</p>",
-                    f"<p>{TODO.format('list categories of processors once selected — hosting, email, CRM')}</p>"]),
+                    f"<p>{TODO.format('list categories of processors once selected, hosting, email, CRM')}</p>"]),
                 ("Retention and security", [
                     f"<p>{TODO.format('state retention periods per data category')}</p>",
                     "<p>We apply technical and organisational security measures appropriate to "
@@ -885,7 +883,7 @@ def legal_pages():
                     f"<p>To exercise a right, contact {TODO.format('data protection contact')}. "
                     "You may also complain to the Nigeria Data Protection Commission.</p>"]),
                 ("International transfers", [
-                    f"<p>{TODO.format('state whether data leaves Nigeria — relevant for cloud hosting and email — and the safeguards applied')}</p>"]),
+                    f"<p>{TODO.format('state whether data leaves Nigeria, relevant for cloud hosting and email, and the safeguards applied')}</p>"]),
                 ("Changes", [
                     "<p>We will post any change to this policy on this page with a revised "
                     "update date.</p>"]),
@@ -930,7 +928,7 @@ def legal_pages():
                     "They do not assert an existing contractual relationship, endorsement or "
                     "affiliation unless expressly stated.</p>"]),
                 ("Limitation of liability", [
-                    f"<p>{TODO.format('liability wording to be drafted by Nigerian counsel — do not publish a generic clause')}</p>"]),
+                    f"<p>{TODO.format('liability wording to be drafted by Nigerian counsel, do not publish a generic clause')}</p>"]),
                 ("Governing law", [
                     "<p>These terms are governed by the laws of the Federal Republic of Nigeria. "
                     f"{TODO.format('confirm jurisdiction and dispute resolution clause with counsel')}</p>"]),
