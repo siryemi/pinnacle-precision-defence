@@ -630,9 +630,8 @@ def careers():
         </div>
         <div class="prose">
           <p>
-            {LEGAL_NAME} never charges a fee at any stage of recruitment, and never asks a
-            candidate for payment for training, processing, vetting or placement. We do not use
-            recruitment agents who charge candidates.
+            Recruitment with {LEGAL_NAME} is free at every stage: application, processing,
+            vetting and placement. Any agent acting for us is paid by us.
           </p>
           <p>
             If anyone requests money in our name, it is a fraud. Please report it to
@@ -747,10 +746,9 @@ def contact():
 
           <div class="notice mt-32">
             <p style="margin:0">
-              <strong>Handling sensitive material:</strong> we do not accept classified or
-              security-sensitive material by email or through this website. Where an engagement
-              requires it, handling arrangements are agreed with the client's own security
-              authority first.
+              <strong>Handling sensitive material:</strong> please keep this form and any email
+              to unclassified information. Where an engagement requires classified handling, we
+              agree arrangements with your own security authority first.
             </p>
           </div>
 
@@ -776,8 +774,8 @@ def contact():
         <div class="step"><div><h3>Acknowledgement</h3></div>
           <p>We confirm receipt and identify the senior person handling the enquiry.</p></div>
         <div class="step"><div><h3>Capability briefing</h3></div>
-          <p>An unclassified discussion of the requirement, at no cost. If we are not the right
-          firm, we say so here.</p></div>
+          <p>An unclassified discussion of the requirement, at no cost, so both sides can
+          judge fit before anyone writes a proposal.</p></div>
         <div class="step"><div><h3>Site assessment</h3></div>
           <p>Where relevant and authorised, a visit to confirm site realities, constraints and
           risk profile before anything is proposed.</p></div>
@@ -866,9 +864,9 @@ def legal_pages():
                     "analytics are added, this section and a consent banner must be added with "
                     "them.</p>"]),
                 ("Sharing", [
-                    "<p>We do not sell personal data. We share it only with service providers "
-                    "under contract, professional advisers, and where required by law or lawful "
-                    "request.</p>",
+                    "<p>We share personal data only with service providers under contract, "
+                    "professional advisers, and where required by law or lawful request. It is "
+                    "never sold or rented.</p>",
                     f"<p>{TODO.format('list categories of processors once selected, hosting, email, CRM')}</p>"]),
                 ("Retention and security", [
                     f"<p>{TODO.format('state retention periods per data category')}</p>",
@@ -895,8 +893,8 @@ def legal_pages():
             "The terms on which this website is made available.",
             [
                 ("Acceptance", [
-                    "<p>By using this website you accept these terms. If you do not accept them, "
-                    "please do not use the site.</p>"]),
+                    "<p>By using this website you accept these terms. Please read them before "
+                    "continuing.</p>"]),
                 ("Information is general", [
                     "<p>Content on this site describes our capabilities in general terms. It is "
                     "not engineering advice, it does not constitute an offer, and it should not "
