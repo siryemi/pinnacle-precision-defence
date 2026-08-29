@@ -1,4 +1,4 @@
-"""Sector pages: who the four capability pillars are applied for.
+"""Sector pages: who the five capability pillars are applied for.
 
 These pages apply the SAME capabilities to different customers. They do not
 claim additional capability, and they do not claim existing contracts — every
@@ -87,7 +87,7 @@ def sectors_index():
     body = page_hero(
         "Sectors",
         "Who we support",
-        "The same four capability pillars, applied to the institutions responsible for "
+        "The same five capability pillars, applied to the institutions responsible for "
         "Nigeria's defence and internal security — and to the domestic industrial base that "
         "will eventually equip them.",
         trail=[("Sectors", None)],
@@ -122,9 +122,9 @@ def sectors_index():
           </p>
           <p>
             We would rather state that honestly than imply separate specialist divisions we do
-            not have. Where a requirement falls outside the four pillars, we will say so.
+            not have. Where a requirement falls outside the five pillars, we will say so.
           </p>
-          <p>{link_arrow("See the four capability pillars", "capabilities/index.html")}</p>
+          <p>{link_arrow("See the five capability pillars", "capabilities/index.html")}</p>
         </div>
       </div>
     </div>
@@ -387,7 +387,7 @@ def all_sector_pages():
             what is held.
           </p>
           <p>
-            The same four pillars apply. Durable, maintainable construction; utility resilience;
+            The same pillars apply. Durable, maintainable construction; utility resilience;
             vendor qualification and inventory visibility; and asset management that lets a
             central authority prioritise across many sites rather than reacting to whichever one
             escalates loudest.

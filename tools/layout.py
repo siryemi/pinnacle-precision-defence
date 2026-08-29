@@ -4,11 +4,18 @@ Source of truth for the <head>, masthead/navigation and footer. Run
 ``python3 tools/generate.py`` to write these into every page (including
 index.html, patched in place between its HEADER/FOOTER markers).
 
-All content derives from two client documents held in "Context from Lekan/":
-  - pinnacle_precision_defense_profile.pptx  (the four capability pillars,
-    mission, engagement model, use cases, contact details)
+Content derives from two client documents held in "Context from Lekan/":
+  - pinnacle_precision_defense_profile.pptx  (pillars 01-04, mission,
+    engagement model, use cases, contact details)
   - Pitch on 3 phases.pdf                    (the short/mid/long-term roadmap)
 Do not invent capabilities that are not in those documents.
+
+EXCEPTION, recorded deliberately: pillar 05 (Sovereign Cloud & AI Infrastructure)
+is NOT in either source document. It was directed by the founder and is grounded
+in Nigeria's NITDA cloud instruments plus publicly released defence cloud
+reference architectures — see research/military-cloud-architectures.md. A signed
+capability statement for it should be added to "Context from Lekan/" so the
+no-invented-capabilities rule holds for pillar 05 as it does for 01-04.
 
 Paths are emitted relative to each page's depth via {P}, so the site works when
 served from a subdirectory (GitHub Pages project sites) and from file://.
@@ -30,6 +37,8 @@ NAV_CAPABILITIES = [
     ("military-construction",    "Military Construction",       "Bases, barracks, logistics hubs, perimeters"),
     ("defence-supply-chain",     "Defence Supply Chain",        "Vendor qualification, sourcing, inventory control"),
     ("modernization-consulting", "Modernization Consulting",    "Asset management, IoT, predictive maintenance"),
+    ("sovereign-cloud-and-ai",   "Sovereign Cloud &amp; AI Infrastructure",
+     "Data classification, landing zones, air-gapped enclaves, sovereign AI"),
 ]
 
 NAV_SECTORS = [
@@ -89,7 +98,7 @@ HEADER = f'''<header class="masthead">
           Capabilities
           {CARET}
         </button>
-        {_panel("panel-cap", "Four capability pillars", "capabilities", NAV_CAPABILITIES)}
+        {_panel("panel-cap", "Five capability pillars", "capabilities", NAV_CAPABILITIES)}
       </div>
 
       <div class="nav__item">

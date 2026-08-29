@@ -17,8 +17,9 @@ def about_index():
         "Fifteen years of engineering, construction and supply chain expertise",
         "Pinnacle Precision Engineering &amp; Consulting Limited is a Nigerian private "
         "engineering and construction firm. For defence stakeholders that experience "
-        "translates into four focused capabilities: secure engineering design, reliable "
-        "construction, disciplined supply chain management and modernization consulting.",
+        "translates into four focused capabilities — secure engineering design, reliable "
+        "construction, disciplined supply chain management and modernization consulting — "
+        "and a fifth built on top of them: sovereign cloud and AI infrastructure.",
         trail=[("About", None)],
     )
 
@@ -75,7 +76,7 @@ def about_index():
               ("Legal entity", f"{LEGAL_NAME}. RC {TODO.format('number')}."),
               ("Headquarters", f"{HQ}. {TODO.format('registered office address')}."),
               ("Experience", "15+ years of combined founding-team industry experience."),
-              ("Service lines", "Four defence-aligned pillars: engineering design, military construction, defence supply chain, modernization consulting."),
+              ("Service lines", "Five defence-aligned pillars: engineering design, military construction, defence supply chain, modernization consulting, and sovereign cloud &amp; AI infrastructure."),
               ("Primary focus", "Nigerian Army infrastructure resilience, operational readiness and modernization."),
               ("Equipment scope", "Non-weaponized categories only. We do not supply weapons or ordnance."),
           ])}
@@ -159,7 +160,7 @@ def about_index():
               ("Hand over something operable",
                "Training, asset data and manuals so the receiving organisation is not dependent on us to run what we built."),
               ("Say what is outside our scope",
-               "Where a requirement falls outside the four pillars, we say so rather than stretching to cover it."),
+               "Where a requirement falls outside the five pillars, we say so rather than stretching to cover it."),
           ])}
         </div>
       </div>

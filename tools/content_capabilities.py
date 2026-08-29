@@ -1,4 +1,4 @@
-"""Capability pages: the /capabilities index plus the four pillars.
+"""Capability pages: the /capabilities index plus the five pillars.
 
 Content source: pinnacle_precision_defense_profile.pptx (slides 2, 4, 5, 6, 7, 8).
 Nothing here should assert a capability absent from that deck.
@@ -16,6 +16,9 @@ _SUMMARIES = {
     "defence-supply-chain": "Vendor qualification, strategic sourcing, logistics coordination, "
                             "inventory dashboards and lifecycle support for non-sensitive "
                             "equipment and services.",
+    "sovereign-cloud-and-ai": "Data classification and workload placement, sovereign landing "
+                              "zone design, air-gapped enclaves for classified workloads, "
+                              "continuous compliance evidence and in-country AI infrastructure.",
     "modernization-consulting": "Risk assessments, asset management, lifecycle cost analysis, "
                                 "digital transformation, IoT pilots and predictive maintenance.",
 }
@@ -101,7 +104,7 @@ def capabilities_index():
 
     body = page_hero(
         "Capabilities",
-        "Four capability pillars for defence infrastructure and modernization",
+        "Five capability pillars for defence infrastructure and modernization",
         "Secure engineering design, reliable construction, disciplined supply chain management "
         "and modernization consulting — framed for defence stakeholders as secure, "
         "maintainable, auditable and readiness-oriented delivery at every stage.",
@@ -544,5 +547,327 @@ def all_capability_pages():
                 ("Defence Industrialisation", "sectors/defence-industrialisation.html",
                  "Local maintenance hubs and capability transfer."),
             ],
+        ),
+
+        capability_page(
+            "sovereign-cloud-and-ai",
+            "Sovereign Cloud &amp; AI Infrastructure",
+            "Capability · Pillar 05",
+            "We do not host government data. We engineer and assure the environment that is "
+            "permitted to — and design the AI capability that runs inside it.",
+            desc="Sovereign cloud and AI infrastructure advisory: data classification and "
+                 "workload placement under Nigeria's cloud instruments, landing zone design, "
+                 "air-gapped enclaves, continuous compliance evidence and in-country AI.",
+            intro='''          <p>
+            Nigeria has written the rules but not the reference architectures. The National
+            Cloud Technical Guideline 2026 and the National Guideline for Cloud Computing in
+            Nigeria 2026 — both mandatory, both effective 1 January 2027 — establish a data
+            classification model from Level 1 to Level 4. Level 4 includes military
+            intelligence, must remain within Nigeria's territorial boundary under all
+            circumstances, and must sit on-premises or in a certified private cloud. For Level 2
+            and above, primary and secondary sites must both be in Nigeria and in different
+            geopolitical zones.
+          </p>
+          <p>
+            Those requirements do not prevent a Nigerian institution from using global cloud
+            capability. They determine <em>where the data rests</em> and <em>who can reach
+            it</em> — which is an architecture problem, not a prohibition. Dedicated in-country
+            infrastructure, vendor hardware installed in a Nigerian facility, and ruggedised
+            edge compute for forward sites all keep data resident while the platform and its
+            services remain the same.
+          </p>
+          <p>
+            Our contribution is the design and assurance work in between: classifying the
+            workloads, designing the landing zone and the residency guardrails that enforce
+            classification technically rather than by policy, specifying key custody so keys
+            stay in Nigerian hands, and engineering the facility the whole thing sits in. That
+            last part is why this sits with us rather than with a software consultancy — a
+            cloud practice cannot design the power train, the cooling plant or the physical
+            security envelope, and the instruments require all three.
+          </p>
+          <p>
+            <strong>Our position is vendor-neutral.</strong> We hold no reseller relationship
+            and we are not a cloud service provider, a data centre operator or a hosting
+            provider. We do not host, process or store client data, and we do not hold or
+            manage client encryption keys. We advise, design, assure and integrate.
+          </p>''',
+            workstreams=[
+                ("Data classification and workload placement",
+                 "Mapping an institution's systems onto Levels 1–4 and producing the placement "
+                 "matrix that decides what may sit where. The first engagement, and the document "
+                 "every later decision depends on."),
+                ("Sovereign landing zone design",
+                 "Account and organisation structure, network segregation, identity, logging and "
+                 "residency guardrails enforced technically — so a workload cannot be deployed "
+                 "to a non-compliant location even by mistake."),
+                ("Access architecture",
+                 "Authorised ingress and authorised egress as named, designed capabilities, with "
+                 "identity-centric access replacing perimeter assumptions."),
+                ("Key custody and encryption design",
+                 "Customer-managed keys held in Nigeria, with a documented key hierarchy and "
+                 "rotation regime. The control that actually answers the extraterritorial-access "
+                 "question rather than deflecting it."),
+                ("Continuous compliance and audit evidence",
+                 "Change control through version-controlled infrastructure definitions, and "
+                 "automated control evidence, so compliance is a continuous state rather than a "
+                 "point-in-time audit scramble."),
+                ("Air-gapped and edge deployment design",
+                 "Disconnected enclaves for Level 4 workloads and ruggedised compute for forward "
+                 "operating bases, designed to run without a link to any external region."),
+                ("Hardened baseline and supply chain provenance",
+                 "A hardened, minimal software baseline and provenance regime for government "
+                 "workloads, so what runs in production is traceable to what was reviewed."),
+                ("AI infrastructure and governance",
+                 "In-country model hosting, training and inference, with the data-governance and "
+                 "human-oversight framework around it. See the AI section below."),
+            ],
+            engagements=[
+                ("Data classification and placement study",
+                 "<p>We inventory an institution's systems and data holdings, classify them "
+                 "against Levels 1–4, and produce a placement matrix: what may use a global "
+                 "region, what must stay in Nigeria, what must be air-gapped, and what the "
+                 "migration sequence should be.</p><ul>"
+                 "<li>Deliverable is a decision document, not a procurement recommendation</li>"
+                 "<li>No warranty of regulatory outcome — the institution and its counsel own "
+                 "any submission to the regulator</li></ul>"),
+                ("Sovereign landing zone design",
+                 "<p>Design of the account structure, network segregation, identity model, "
+                 "logging and audit trail, and the residency guardrails that make "
+                 "classification enforceable in code. Delivered as a documented design plus "
+                 "reusable infrastructure definitions the institution owns.</p>"
+                 "<p>Where an institution runs many agencies, this becomes a reusable baseline "
+                 "each one inherits — which is materially cheaper than every programme "
+                 "designing its own.</p>"),
+                ("Air-gapped enclave design for classified workloads",
+                 "<p>Design of a disconnected environment for Level 4 data: platform selection, "
+                 "update and patch pathway without external connectivity, backup and recovery, "
+                 "and the facility requirements that go with it.</p>"),
+                ("Continuous compliance implementation",
+                 "<p>Establishing version-controlled change management and automated control "
+                 "evidence collection, so the institution can demonstrate compliance on demand "
+                 "instead of reconstructing it annually.</p>"),
+                ("AI readiness and sovereign AI design",
+                 "<p>Assessment of where AI can be applied against data the institution is "
+                 "permitted to use, what infrastructure that requires in country, and the "
+                 "governance framework needed before a model influences any decision.</p>"),
+                ("Edge compute for forward operating bases",
+                 "<p>Design of ruggedised, low-bandwidth-tolerant compute for dispersed sites — "
+                 "local processing, deferred synchronisation, and physical and environmental "
+                 "protection appropriate to the location.</p>"),
+            ],
+            deliverables=[
+                ("Data classification register", "Every system mapped to a level, with the reasoning recorded."),
+                ("Workload placement matrix", "What may sit where, and the migration sequence."),
+                ("Landing zone design and baseline", "Documented design plus reusable definitions the client owns."),
+                ("Access and key management design", "Ingress, egress, identity and key custody specified."),
+                ("Compliance evidence pipeline", "Automated control evidence and a change audit trail."),
+                ("AI governance framework", "Permitted data, human oversight, evaluation and review cadence."),
+            ],
+            related=[
+                ("Defence Engineering Design", "capabilities/engineering-design.html",
+                 "The facility the platform sits in."),
+                ("Modernization Consulting", "capabilities/modernization-consulting.html",
+                 "Asset data and analytics that feed it."),
+                ("Ministry of Defence &amp; DHQ", "sectors/defence-headquarters.html",
+                 "Estate-wide and joint programme adoption."),
+            ],
+            extra='''
+  <section class="section section--ink2 section--line">
+    <div class="shell">
+      <div class="section-head section-head--wide">
+        <p class="eyebrow">Reference architecture</p>
+        <h2 class="d2">A generic sovereign environment, layer by layer</h2>
+        <p class="lede mt-16">
+          This is our own generic reference model, drawn deliberately vendor-neutral. It is
+          informed by publicly released defence cloud reference architectures and adapted to
+          Nigeria's classification levels. Each engagement produces a specific architecture;
+          this shows the shape.
+        </p>
+      </div>
+
+      <div class="diagram">
+        <svg viewBox="0 0 900 560" role="img"
+             aria-label="Layered sovereign cloud reference architecture. From top: an access layer with authorised ingress and authorised egress; a workload zone layer split into Level 1 to 2 general, Level 3 restricted, and Level 4 classified air-gapped; an AI and analytics layer with model hosting, training and edge inference; a control plane with identity, policy guardrails, key custody and logging; an in-country platform layer with dedicated infrastructure, on-premises nodes and tactical edge; and at the base a facility layer covering power, cooling, earthing and physical security. A continuous compliance evidence band spans every layer.">
+          <g stroke="#1E2831" stroke-width="1" fill="none">
+            <path d="M22 44v476"/>
+          </g>
+
+          <!-- 01 ACCESS -->
+          <text x="34" y="36" fill="#C9A227" font-family="monospace" font-size="9">01 · ACCESS</text>
+          <g fill="none" stroke="#14A356" stroke-width="1.3">
+            <rect x="34" y="44" width="320" height="46" rx="2"/>
+            <rect x="370" y="44" width="320" height="46" rx="2"/>
+          </g>
+          <g fill="#EDF0EE" font-family="monospace" font-size="10" text-anchor="middle">
+            <text x="194" y="73">AUTHORISED INGRESS</text>
+            <text x="530" y="73">AUTHORISED EGRESS</text>
+          </g>
+
+          <!-- 02 WORKLOAD ZONES -->
+          <text x="34" y="122" fill="#C9A227" font-family="monospace" font-size="9">02 · WORKLOAD ZONES</text>
+          <g fill="none" stroke="#14A356" stroke-width="1.3">
+            <rect x="34" y="130" width="205" height="58" rx="2"/>
+            <rect x="252" y="130" width="205" height="58" rx="2"/>
+          </g>
+          <rect x="470" y="130" width="220" height="58" rx="2" fill="none" stroke="#C9A227" stroke-width="1.6" stroke-dasharray="6 4"/>
+          <g fill="#A7B0AC" font-family="monospace" font-size="9" text-anchor="middle">
+            <text x="136" y="155">LEVEL 1–2</text><text x="136" y="170">GENERAL</text>
+            <text x="354" y="155">LEVEL 3</text><text x="354" y="170">RESTRICTED</text>
+            <text x="580" y="155" fill="#C9A227">LEVEL 4 · CLASSIFIED</text>
+            <text x="580" y="170" fill="#C9A227">AIR-GAPPED</text>
+          </g>
+
+          <!-- 03 AI -->
+          <text x="34" y="220" fill="#C9A227" font-family="monospace" font-size="9">03 · AI &amp; ANALYTICS</text>
+          <rect x="34" y="228" width="656" height="54" rx="2" fill="none" stroke="#14A356" stroke-width="1.3"/>
+          <g stroke="#1E2831" stroke-width="1">
+            <path d="M252 228v54M470 228v54"/>
+          </g>
+          <g fill="#A7B0AC" font-family="monospace" font-size="9" text-anchor="middle">
+            <text x="143" y="252">MODEL</text><text x="143" y="266">HOSTING</text>
+            <text x="361" y="252">TRAINING &amp;</text><text x="361" y="266">FINE-TUNING</text>
+            <text x="580" y="252">INFERENCE</text><text x="580" y="266">AT THE EDGE</text>
+          </g>
+
+          <!-- 04 CONTROL PLANE -->
+          <text x="34" y="314" fill="#C9A227" font-family="monospace" font-size="9">04 · CONTROL PLANE</text>
+          <g fill="none" stroke="#14A356" stroke-width="1.3">
+            <rect x="34" y="322" width="158" height="50" rx="2"/>
+            <rect x="200" y="322" width="158" height="50" rx="2"/>
+            <rect x="366" y="322" width="158" height="50" rx="2"/>
+            <rect x="532" y="322" width="158" height="50" rx="2"/>
+          </g>
+          <g fill="#A7B0AC" font-family="monospace" font-size="8.5" text-anchor="middle">
+            <text x="113" y="344">IDENTITY &amp;</text><text x="113" y="357">ACCESS</text>
+            <text x="279" y="344">POLICY</text><text x="279" y="357">GUARDRAILS</text>
+            <text x="445" y="344">KEY CUSTODY</text><text x="445" y="357">(IN NIGERIA)</text>
+            <text x="611" y="344">LOGGING &amp;</text><text x="611" y="357">AUDIT TRAIL</text>
+          </g>
+
+          <!-- 05 PLATFORM -->
+          <text x="34" y="404" fill="#C9A227" font-family="monospace" font-size="9">05 · IN-COUNTRY PLATFORM</text>
+          <g fill="none" stroke="#14A356" stroke-width="1.3">
+            <rect x="34" y="412" width="212" height="50" rx="2"/>
+            <rect x="256" y="412" width="212" height="50" rx="2"/>
+            <rect x="478" y="412" width="212" height="50" rx="2"/>
+          </g>
+          <g fill="#A7B0AC" font-family="monospace" font-size="8.5" text-anchor="middle">
+            <text x="140" y="434">DEDICATED</text><text x="140" y="447">INFRASTRUCTURE</text>
+            <text x="362" y="434">ON-PREMISES</text><text x="362" y="447">NODES</text>
+            <text x="584" y="434">TACTICAL</text><text x="584" y="447">EDGE</text>
+          </g>
+
+          <!-- 06 FACILITY -->
+          <text x="34" y="494" fill="#C9A227" font-family="monospace" font-size="9">06 · FACILITY — OUR ENGINEERING CORE</text>
+          <rect x="34" y="502" width="656" height="46" rx="2" fill="rgba(201,162,39,0.10)" stroke="#C9A227" stroke-width="1.6"/>
+          <text x="362" y="530" fill="#C9A227" font-family="monospace" font-size="9.5" text-anchor="middle">POWER · COOLING · EARTHING &amp; LPS · PHYSICAL SECURITY · RESILIENCE</text>
+
+          <!-- continuous compliance band -->
+          <rect x="716" y="44" width="154" height="504" rx="2" fill="none" stroke="#14A356" stroke-width="1.2" stroke-dasharray="6 5"/>
+          <text transform="translate(802,296) rotate(-90)" fill="#14A356" font-family="monospace" font-size="10" text-anchor="middle">CONTINUOUS COMPLIANCE EVIDENCE</text>
+          <text transform="translate(820,296) rotate(-90)" fill="#6E767C" font-family="monospace" font-size="8" text-anchor="middle">CHANGE CONTROL · CONTROL TESTING · REPORTING</text>
+        </svg>
+        <p class="diagram__caption">
+          Our own generic model, drawn vendor-neutral. Layers 01 to 05 are the cloud practice;
+          layer 06 is the engineering business we already run. The compliance band spans every
+          layer because evidence is produced continuously, not assembled for an audit.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Artificial intelligence</p>
+          <h2 class="d2">AI is a data-governance problem before it is a technology problem</h2>
+          <p class="lede mt-16">
+            The constraint on defence AI in Nigeria is not model availability. It is which data
+            a model may lawfully be trained on and where that training may physically happen —
+            which returns directly to classification and residency.
+          </p>
+          <p class="mt-24">
+            Nigeria's own cloud instruments already name AI infrastructure providers and
+            sovereign compute providers among the parties they regulate. The obligations are
+            arriving alongside the capability, and an institution that adopts AI without a
+            classification and governance position first will have to unwind it.
+          </p>
+        </div>
+        <div>
+          <div class="ruled">
+            <div class="ruled__row">
+              <h3>In-country AI infrastructure</h3>
+              <p>Training and inference on infrastructure physically resident in Nigeria, so
+              classified and restricted data never has to leave to be useful. Includes the
+              power and cooling design that accelerated compute actually demands — which is a
+              materially different thermal problem from general-purpose servers.</p>
+            </div>
+            <div class="ruled__row">
+              <h3>Permitted-data determination</h3>
+              <p>Which datasets a model may lawfully be trained or fine-tuned on, by
+              classification level, recorded as a decision document before any development
+              starts.</p>
+            </div>
+            <div class="ruled__row">
+              <h3>Applied use cases within our scope</h3>
+              <p>Predictive maintenance on vehicle and generator fleets, condition monitoring
+              across facilities, demand forecasting for spares and inventory, and document and
+              language processing for administrative load. All non-weaponized, all extending
+              work we already do.</p>
+            </div>
+            <div class="ruled__row">
+              <h3>Governance and human oversight</h3>
+              <p>Model inventory, evaluation before deployment, monitoring for drift, a named
+              accountable human for every model that informs a decision, and a review cadence.
+              Written to be auditable.</p>
+            </div>
+            <div class="ruled__row">
+              <h3>What we will not build</h3>
+              <p>We do not build autonomous targeting or weapons-related systems, and we do not
+              build AI for surveillance directed at civilians or lawful dissent. A human remains
+              accountable for every consequential decision in anything we design.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="shell">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Honest position</p>
+          <h2 class="d2">What we are, and what we are not</h2>
+          <p class="lede mt-16">
+            This pillar is newer than the four it sits on. Stating its limits plainly is what
+            makes the rest of the page worth reading.
+          </p>
+        </div>
+        <div class="prose">
+          <p><strong>We are:</strong> an engineering and consulting firm that classifies
+          workloads, designs sovereign environments and the facilities that host them, and
+          designs the governance around AI.</p>
+          <p><strong>We are not:</strong> a cloud service provider, a data centre operator, a
+          hosting provider, a reseller, or a certification body. We hold no assurance
+          certification for operating national digital infrastructure, and we do not claim a
+          path to one.</p>
+          <p><strong>We do not:</strong> host, process or store client data; hold or manage
+          client encryption keys; or perform audit or attestation functions on our own work.</p>
+          <p>
+            Partner standing and certified engineering headcount for this pillar:
+            <span class="todo">TODO: state cloud partner tier and number of certified
+            architects, or remove this pillar from the site until it can be stated</span>.
+          </p>
+          <p>
+            Where a requirement needs capability we do not hold, we say so and propose a named
+            joint venture rather than stretching to cover it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+''',
         ),
     ]

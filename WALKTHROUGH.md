@@ -9,16 +9,16 @@ investor, or a colleague. Roughly 6–8 minutes at a normal pace.
 
 ## Before you start
 
-The site is not publicly reachable at the moment (the repository is private, which turns off
-GitHub Pages). To demo it, run it on your own machine:
+The site is live at **https://siryemi.github.io/pinnacle-precision-defence/**
+
+If the room has bad wifi, run it locally instead — it works fully offline:
 
 ```bash
 cd lekanpinnacle
-python3 -m http.server 8000
+python3 -m http.server 8000     # then open http://localhost:8000
 ```
 
-Then open **http://localhost:8000** in a browser. Everything works offline — no internet needed,
-which is useful in a room with bad wifi.
+Note that `localhost` only works in a browser on the same machine as the server.
 
 **Skip these three in a live demo** — they are deliberately unfinished and will undercut you:
 Leadership (placeholder names), Insights (nothing written yet), and the Legal pages (marked as
@@ -37,8 +37,8 @@ drafts). Nothing in the route below touches them.
 
 Point at the line underneath it.
 
-> "Four things: secure design, reliable construction, disciplined supply chains, and
-> data-driven asset management."
+> "Four things we already do: secure design, reliable construction, disciplined supply
+> chains, and data-driven asset management. And a fifth built on top — sovereign cloud and AI."
 
 ---
 
@@ -53,9 +53,9 @@ Point at the line underneath it.
 
 ---
 
-## Step 3 — Scroll to "Four capability pillars" and click through the four tabs
+## Step 3 — Scroll to "Five capability pillars" and click through the tabs
 
-This is the core of the pitch. Click each tab, pause on each, and say one sentence.
+This is the core of the pitch. Click each tab, pause on each, and say one sentence. Five tabs.
 
 **Tab 1 — Engineering design.** A diagram appears showing FEED → DETAIL → REVIEW → IFC.
 > "We design the facility before anyone builds it. Command centres, secure stores, blast-aware
@@ -75,6 +75,59 @@ This is the core of the pitch. Click each tab, pause on each, and say one senten
 > "And this is where it gets interesting. We put sensors on vehicles and generators, and the
 > data tells us a part is failing before it fails. You fix it on a Tuesday in the workshop
 > instead of on an operation."
+
+---
+
+**Tab 5 — Sovereign cloud & AI.** A diagram of data classification Levels 1 to 4.
+> "And this is the newest one. Nigeria's cloud rules classify government data from Level 1 to
+> Level 4 — and Level 4, which includes military intelligence, may never leave the country.
+> We classify the workloads, design the environment that's allowed to hold them, and engineer
+> the building it sits in. Nobody else does both halves."
+
+---
+
+## Step 3b — Sovereign cloud and AI, in depth
+
+Worth its own stop if the person in the room is technical or from an ICT directorate. Click
+**Capabilities → Sovereign Cloud & AI Infrastructure**.
+
+**They see:** an overview, then a full-width layered reference architecture diagram.
+
+**Say, pointing at the diagram from the bottom up:**
+> "Read this from the bottom. Layer six is the facility — power, cooling, earthing, physical
+> security. That's the business we already run.
+>
+> Layer five is the platform physically inside Nigeria. Four is the control plane — identity,
+> policy guardrails, and key custody, with the keys held here, not abroad. Three is AI. Two is
+> the workload zones, and notice Level 4 in gold — that one is air-gapped, no connection out.
+> One is how people reach it.
+>
+> And that dashed band down the right spans every layer: compliance evidence is produced
+> continuously, not assembled the week before an audit."
+
+Then the key line:
+> "A software consultancy can design layers one to five but cannot engineer layer six. An
+> engineering firm can build layer six but cannot classify the workloads. The rules require
+> both. That's the position."
+
+Scroll to the **AI section**:
+> "AI here is a data-governance problem before it's a technology problem. The question isn't
+> which model — it's which data we're lawfully allowed to train on, and where that training is
+> allowed to physically happen. We answer that first, in writing, before anyone builds
+> anything."
+
+And read the last row of the AI list out loud — it matters:
+> "We don't build autonomous targeting or weapons systems, and we don't build AI for
+> surveillance aimed at civilians. A human stays accountable for every consequential decision."
+
+**Then scroll to "What we are, and what we are not"** and read the *not* list. This page makes
+the strongest claims on the site, so the limits do the most work here: not a cloud provider,
+not a data centre operator, not a reseller, holds no assurance certification, does not host
+data or hold keys.
+
+> **Note for the demo:** this page carries a gold placeholder for cloud partner tier and
+> certified architect headcount. Until those are real, do not present this pillar as available
+> today — present it as the direction, with the facility layer available now.
 
 ---
 
@@ -186,8 +239,10 @@ If you only get one lift's worth of time:
 
 > "We are an Abuja engineering and construction firm doing four things for defence: we design
 > secure facilities, we build them, we run the supply chain that equips them, and we use sensor
-> data to keep vehicles and generators running. We start by helping you buy the right kit. We
-> end up manufacturing it in Nigeria."
+> data to keep vehicles and generators running. On top of that we classify government data
+> against Nigeria's new cloud rules and design the sovereign environment and AI that runs
+> inside it — including the building it physically sits in, which nobody else combines. We
+> start by helping you buy the right kit. We end up manufacturing it in Nigeria."
 
 ---
 

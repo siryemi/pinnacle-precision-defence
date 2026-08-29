@@ -549,6 +549,27 @@ a.card:hover {
 }
 .rotator__figure svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 
+/* Reference-architecture diagram — full-width, own aspect ratio (unlike
+   .rotator__figure, which is locked to 4:3). */
+.diagram {
+  border: 1px solid var(--line-solid);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(70% 60% at 80% 10%, rgba(0, 132, 61, 0.16), transparent 60%),
+    linear-gradient(160deg, var(--ink-3), var(--ink-2));
+  padding: clamp(16px, 2.5vw, 30px);
+  overflow: hidden;
+}
+.diagram svg { width: 100%; height: auto; display: block; }
+.diagram__caption {
+  margin: 18px 0 0;
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  max-width: 88ch;
+}
+.section--paper .diagram { border-color: rgba(8, 11, 15, 0.22); }
+.section--paper .diagram__caption { color: var(--text-ink-dim); }
+
 /* Stat row */
 .stats {
   display: grid;
