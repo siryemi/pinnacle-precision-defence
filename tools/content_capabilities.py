@@ -822,12 +822,6 @@ def all_capability_pages():
               accountable human for every model that informs a decision, and a review cadence.
               Written to be auditable.</p>
             </div>
-            <div class="ruled__row">
-              <h3>What we will not build</h3>
-              <p>We do not build autonomous targeting or weapons-related systems, and we do not
-              build AI for surveillance directed at civilians or lawful dissent. A human remains
-              accountable for every consequential decision in anything we design.</p>
-            </div>
           </div>
         </div>
       </div>

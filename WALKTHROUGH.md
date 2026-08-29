@@ -116,10 +116,6 @@ Scroll to the **AI section**:
 > allowed to physically happen. We answer that first, in writing, before anyone builds
 > anything."
 
-And read the last row of the AI list out loud — it matters:
-> "We don't build autonomous targeting or weapons systems, and we don't build AI for
-> surveillance aimed at civilians. A human stays accountable for every consequential decision."
-
 **Then scroll to "What we are, and what we are not"** and read the *not* list. This page makes
 the strongest claims on the site, so the limits do the most work here: not a cloud provider,
 not a data centre operator, not a reseller, holds no assurance certification, does not host
